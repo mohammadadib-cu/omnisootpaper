@@ -1,7 +1,7 @@
-\chapter{Theoretical Model}
-In this chapter, the mathematical basis for \textit{omnisoot} is explained in the top-to-bottom hierarchical order. The highest level is the reactors and flames that include the transport equations of gas mixture and "soot variables". Soot formation source terms are handled by the particle dynamics model that mainly addresses particle size distribution (PSD), morphology and coagulation rate. The "PAH growth model" computes the contribution of inception and adsorption to source terms based on PAHs designated as precursors. Similarly, the "surface reactions" model obtains the surface growth and oxidation rate by HACA mechanism and passes them to the particle dynamics model. 
+\section{Theoretical Foundation \& Governing Equations}
+The mathematical basis for \textit{omnisoot} is explained in the top-to-bottom hierarchical order. The highest level is the reactors that include the transport equations of gas mixture and "soot variables". Soot formation source terms are handled by the particle dynamics model that mainly addresses particle size distribution (PSD), morphology and coagulation rate. The \textit{"PAH growth model"} computes the contribution of inception and adsorption to source terms based on PAHs designated as precursors. Similarly, the \textit{"surface reactions"} model obtains the surface growth and oxidation rate by HACA mechanism and passes them to the particle dynamics model. 
 
-\section{Assumptions and conventions}
+\subsection{Assumptions and conventions}
 Here, the main conventions and assumptions used in the derivation of the mathematical model are listed below.
 
 \begin{enumerate}
@@ -47,78 +47,6 @@ Here, the main conventions and assumptions used in the derivation of the mathema
 
 \end{enumerate}
 
-\section{Flames}
-This research focuses on axisymmetric stagnation flames that reduces the laminar 3D steady-state equations in the cylindrical coordinates (r-z-$\mathrm{\theta}$ system) to one-dimensional domain in r-z plane. The derivation of flow equations for a reacting gas is explained in detail in Section 7.2 of \citep{kee2017chemically}. Here, the modified version of equations is provided that takes into account the mass and momentum of particles, the removal/release of species due to soot inception, surface growth and oxidation as well as the formation and sensible energy of soot.
-
-\noindent Continuity:
-\begin{equation}
-	\frac{\partial \rho u}{\partial z} = 2\rho V - \sum_j \dot{s}_j W_j
-	\label{eqn:flame_cont},
-\end{equation}
-
-\noindent Radial Momentum:
-\begin{equation}
-	\rho u\frac{\partial V}{\partial z} + \rho V^2=-\Lambda +
-	\frac{\partial}{\partial z}
-	\left(
-		\mu \frac{\partial V}{\partial z}
-	\right)
-	\label{eqn:flame_momen},
-\end{equation}
-\noindent Energy:
-\begin{equation}
-	\left[
-		(1-\varphi)\rho c_p
-		+\varphi\rho_{soot} c_{p,soot}
-	\right] u
-	\frac{\partial T}{\partial z} = 	\frac{\partial}{\partial z}
-	\left(
-	K \frac{\partial T}{\partial z}
-	\right)
-	-\sum_{k}^{n_{sp}} J_k \frac{\partial h_k}{\partial z}
-	-\sum_{k}^{n_{sp}} h_k W_k
-	\left(
-		\omega_k+\dot{s}_k
-	\right)
-	\label{eqn:flame_energy},
-\end{equation}
-\noindent Species:
-\begin{equation}
-	\rho u\frac{\partial Y_k}{\partial z} = 
-	-\frac{\partial J_k}{\partial z}
-	+ W_j 
-	\left(
-	\omega_k+\dot{s}_k
-	\right)
-	\label{eqn:flame_species},
-\end{equation}
-\noindent where $\mathrm{V=v/r}$ is the scaled radial velocity, and $\mathrm{\Lambda}$ is the pressure eigenvalue. $\mathrm{J_k}$ denotes the diffusive flux of species $\mathrm{k}$ that is usually calculated using mixture averaged formulation.
-
-\begin{equation}
-	J^*_K = -\rho \frac{W_k}{W_T}D^{'}_{km}
-	\frac{\partial X_k}{\partial z}
-	\label{eqn:diffflux_star},
-\end{equation}
-
-\begin{equation}
-	J_K = J^*_K - Y_k \sum_{l=1}^{n_{sp}} J^*_l
-	\label{eqn:diffflux},
-\end{equation}
-
-The details of calculation of mixture-averaged diffusive fluxes can be found in the documentation of \verb| GasTransport::getMixDiffCoeffs()|\footnote[1]{https://cantera.org/documentation/docs-3.0/doxygen/html/d8/d58/classCantera\_1\_1GasTransport.html} in Cantera~\citep{cantera}. Soot variables are treated similar to species, and their transport equations can be written as:
-\begin{equation}
-	\rho u\frac{\partial \psi}{\partial z} = 
-	-\frac{\partial}{\partial z}
-	\left(
-		D\frac{\partial \psi}{\partial z}
-	\right)
-	+ S_{\psi} 
-	\label{eqn:flame_soot},
-\end{equation}
-\noindent where $\psi$ is a generic soot variable that represents any of tracked soot variables.
-
-\section{Reactors}
-Zero-dimensional reactors are ideal representation of reactive systems typical in industrial applications. The strong mixing in the volume/cross-section allows description of thermal/chemical/hydrodynamic properties of mixture with a single variable that evolves in time. This section entails the conservation equations of mass, momentum (if applicable), species, energy, and soot for three reactor models.
 
 \subsection{Constant Volume Reactor}
 This reactor assumes that the volume of system does not change during the process. In the absence of soot, this leads to gas with constant density. However, soot formation converts part of gaseous species to solid particles thereby affecting its volume and density. Note that, continuity, species and energy transport equations only track gas mixture properties. Figure~\ref{fig:constuvcv} illustrates the control volume over the gas mixture targeted by mass and energy balance equations. Any mass converted to solid soot particles leaves the control volume. Mass and energy passes through the control surface around solid particles by soot formation processes. Reactor volume is the sum of volume of gas mixture and solid particles.
@@ -339,7 +267,6 @@ The soot transport equations can also be written as:
 Population balance models rely on the Eulerian description of particles where bulk properties of particle population such as number density, mass or surface area are treated as continuous quantities and tracked by solving scalar transport equations. These methods are computationally cheaper compared with mesoscale models such as DEM, and can be easily interfaced with chemical kinetics in CFD solvers to simulate soot formation in turbulent configurations. Here, we use two particle dynamics models: a monodisperse population balance model (MPBM) based on four variables leading to 4 transport equations in total, and a fixed sectional population balance model (SPBM) tracking three variables per section. The total number of transport equations in the sectional model is determined by the number of sections and number of equations solved per section. The first two/three variables in the MPBM/SPBM enables description of number, mass, and evolving fractal-like morphology of soot agglomerates that are necessary to accurately predict collision frequency of agglomerates~\citep{mulholland1988cluster} as well as oxidation and surface growth rates~\citep{kelesidis2019estimating}. The last variable tracks the number of hydrogen atoms in agglomerates that allows the model to capture the soot composition, thereby its maturity~\citep{kholghy2016core}, and surface reactivity~\citep{blanquart2009analyzing}.  
 The tracked variables are used to address particle dynamics that includes (i) reconstructing particles morphology by determining characteristic diameters from tracked soot variables, (ii) calculating collision frequency and coagulation source term, (iii) combining the contribution of inception, PAH adsorption, surface growth and oxidation into source terms.
 First, common features of both particle dynamics models are reviewed. As mentioned before, any parameter with superscript i denotes the section number, which can be ignored/dropped for the MPBM that only has one section. For example, $\mathrm{d^i_m}$ can be replaced with $\mathrm{d_m}$.
-%Here, we use "Monodisperse" and "Sectional" population balance models to account for "particle dynamics". They track large-scale bulk features of the particle population such as number concentration and mass as opposed to the mesoscale methods such as DEM that track particles individually. This makes them computationally cheaper compared with mesoscale models such as DEM. The population balance models are coupled with gas chemistry by two buffer sub-units, "surface reactions" that account for surfaced growth and oxidation via HACA scheme and "PAH growth models" that entails the reaction pathways for inception and adsorption of PAH precursors. The surface reactions to describe soot formation steps from inception, growth, and agglomeration to oxidation.
 
 \subsection{Soot Morphology}
 \label{sec:sootmorphology}
@@ -1000,6 +927,10 @@ The rate of release of H radicals into the gas mixture due to surface growth is:
 	\label{eqn:Hrate_gr}.
 \end{equation}
 
+
+
+
+
 \renewcommand{\arraystretch}{1.5}
 \begin{table}
 	\caption{Rate coefficients for the various surface reactions in Arrhenius form $\mathrm{k=AT^n\cdot e^{-E/RT}}$}
@@ -1083,7 +1014,7 @@ where $\mathrm{d_{r}}$ and $\mathrm{m_{r}}$ are reduced diameter and mass for tw
 
 \begin{equation}
 	m_{r}=
-		\frac{m_{PAH_k}\cdot m_{PAH_k}}{m_{PAH_j}+ m_{PAH_j}}
+	\frac{m_{PAH_k}\cdot m_{PAH_k}}{m_{PAH_j}+ m_{PAH_j}}
 	\label{eqn:mrPAH}
 \end{equation}
 
@@ -1100,7 +1031,7 @@ The diameter of PAH is calculated from its mass and density.
 \begin{equation}
 	d_{PAH_j}=
 	\left(
-		\frac{6\cdot m_{PAH_j}}{\pi\cdot\rho_{PAH_j}}
+	\frac{6\cdot m_{PAH_j}}{\pi\cdot\rho_{PAH_j}}
 	\right)^{1/3}
 	\label{eqn:dPAH}
 \end{equation}
@@ -1136,12 +1067,12 @@ The collision frequency of $\mathrm{PAH_j}$ and soot agglomerates in each sectio
 
 \begin{equation}
 	\beta^i_{cont, ad_js}=
-		\frac{2 k_B T}{3 \mu}
-		\left[
-			\frac{C^i\left(d_m\right)}{d^i_g}+
-			\frac{C^i\left(d_{PAH_j}\right)}{d_{PAH_j}}
-		\right]
-		\left(d_g+d_{PAH_j}\right)
+	\frac{2 k_B T}{3 \mu}
+	\left[
+	\frac{C^i\left(d_m\right)}{d^i_g}+
+	\frac{C^i\left(d_{PAH_j}\right)}{d_{PAH_j}}
+	\right]
+	\left(d_g+d_{PAH_j}\right)
 	\label{eqn:betacontads}
 \end{equation}
 where $C^i$ is the Cunningham function calculated as Equation~\ref{eqn:cun}.
@@ -1212,7 +1143,7 @@ The formation of a dimer consumes two PAH molecules, and during adsorption one P
 
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{inc}
 	= 
 	-2w_{dim_j}-\sum_{i=1}^{n_{sec}}w^i_{ads_j}
@@ -1222,7 +1153,7 @@ The formation of a dimer consumes two PAH molecules, and during adsorption one P
 During the adsorption process one $\mathrm{H_2}$ is released to the gas mixture.
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
 	\right)_{inc}
 	= 
 	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
@@ -1247,7 +1178,7 @@ This model is built on Irreversible Dimerization with two main differences: The 
 \end{equation}
 
 where ${p^{''}}=0.1$ accounts for the probability of PAH-PAH collisions in “FACE” configuration that results in successful vdW bond formation~\citep{miller1984intermolecular}. The reverse rate of physical dimerization, ${k_{r,dim_{jk}}}$ is obtained from the dimerization equilibrium constant~\citep{miller1991kinetics} as:
-	
+
 \begin{equation}
 	\mathrm{log}_{10}K_{eq}=
 	a\frac{\epsilon_{jk}}{RT}+b
@@ -1398,7 +1329,7 @@ The rate of removal of PAH from gas mixture due to adsorption is given as
 During the adsorption process one $\mathrm{H_2}$ is released to the gas mixture.
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
 	\right)_{inc}
 	= 
 	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
@@ -1555,7 +1486,7 @@ The rate of removal of PAHs and release of $\mathrm{H_2}$ due to inception and P
 
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{inc}
 	= 
 	-4\sum_{k=1}^{n_{PAH}}w_{inc_{j}}-2\sum_{i=1}^{n_{sec}}w^i_{ads_j}
@@ -1564,7 +1495,7 @@ The rate of removal of PAHs and release of $\mathrm{H_2}$ due to inception and P
 
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
 	\right)_{inc}
 	= 
 	2\sum_{i=1}^{n_{sec}}w^i_{ads_j}
@@ -1612,7 +1543,7 @@ The rate constants of Reactions~\eqref{reac:dehyd_ebri}\&\eqref{reac:hyd_ebri} a
 		Reaction & \hspace{0.1cm} & A~$\mathrm{\left[ \frac{m^3}{mol\cdot s} \right]}$ & n & $\mathrm{\frac{E}{R} [K]}$  \\
 		\hline
 		\eqref{reac:dehyd_ebri} & f & $98\times$ $\mathrm{n_{C, PAH_j}}$ & 1.8 & 7,563.519 \\
-		  & r & $1.6\times 10^{-2}$ & 2.63 & 2145.346\\
+		& r & $1.6\times 10^{-2}$ & 2.63 & 2145.346\\
 		\eqref{reac:hyd_ebri} & f & $4.8658\times10^7
 		$ & 0.13 & 0.0\\
 		\hline
@@ -1637,14 +1568,14 @@ The calculations of rate of inception and PAH adsorption from $\mathrm{PAH_j}$ r
 \end{equation*}
 
 \begin{equation*}
-\begin{aligned}
-	&&k_{f,d_j}[\mathrm{PAH_j}][\mathrm{H}]
-	-k_{r,d_j}[\mathrm{\dot{PAH}_j}][\mathrm{H_2}]
-	-k_{f,h_j}[\mathrm{\dot{PAH}_j}][\mathrm{H}]
-	-k_{inc_j}[\mathrm{\dot{PAH}_j}]^2 &\\
-	&&-\sum_{i=1}^{n_{sec}}k^i_{ads_j}[\mathrm{\dot{PAH}_j}][\mathrm{Soot}]^i
-	&= 0
-\end{aligned}
+	\begin{aligned}
+		&&k_{f,d_j}[\mathrm{PAH_j}][\mathrm{H}]
+		-k_{r,d_j}[\mathrm{\dot{PAH}_j}][\mathrm{H_2}]
+		-k_{f,h_j}[\mathrm{\dot{PAH}_j}][\mathrm{H}]
+		-k_{inc_j}[\mathrm{\dot{PAH}_j}]^2 &\\
+		&&-\sum_{i=1}^{n_{sec}}k^i_{ads_j}[\mathrm{\dot{PAH}_j}][\mathrm{Soot}]^i
+		&= 0
+	\end{aligned}
 \end{equation*}
 
 The above equations can be rearranged as a quadratic equation similar to the dimer coalescence.
@@ -1756,19 +1687,19 @@ The rate of production/destruction of species involved in soot formation must be
 
 \begin{equation}
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{tot}
 	= 
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{gas}
 	+
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{inc}
 	+
 	\left(
-		\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
 	\right)_{ads}
 	\label{eqn:PAHscrub_total}.
 \end{equation}
@@ -1835,11 +1766,11 @@ Oxidation uses $\mathrm{O_2}$ and $\mathrm{OH}$ to remove carbon from soot parti
 
 \begin{equation}
 	\left(
-		\frac{
-			d\left[
-				\mathrm{CO}
-			\right]
-		}{dt}
+	\frac{
+		d\left[
+		\mathrm{CO}
+		\right]
+	}{dt}
 	\right)_{tot}
 	= 
 	\left(

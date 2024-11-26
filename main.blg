@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: Includes/title.aux
+Database file #1: Includes/Bibliography/all.bib
+I was expecting an "="---line 1137 of file Includes/Bibliography/all.bib
+ :   
+ :   author={Shaddix, Christopher R and Smyth, Kermit C},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 4393 of file Includes/Bibliography/all.bib
+ : @misc{cantera
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in myhre2014anthropogenic
+Warning--can't use both volume and number fields in frenklach1991detailed
+Warning--can't use both volume and number fields in miller1985calculations
+Warning--can't use both volume and number fields in miller1991kinetics
+Warning--empty journal in haaland1983simple
+Warning--can't use both volume and number fields in ciajolo1998spectroscopic
+Warning--can't use both volume and number fields in homann1985formation
+Warning--can't use both volume and number fields in knorre1996soot
+You've used 116 entries,
+            2481 wiz_defined-function locations,
+            1215 strings with 27558 characters,
+and the built_in function-call counts, 49967 in all, are:
+= -- 4212
+> -- 2782
+< -- 58
++ -- 1056
+- -- 820
+* -- 4264
+:= -- 7936
+add.period$ -- 362
+call.type$ -- 116
+change.case$ -- 229
+chr.to.int$ -- 112
+cite$ -- 124
+duplicate$ -- 2310
+empty$ -- 4439
+format.name$ -- 991
+if$ -- 10503
+int.to.chr$ -- 5
+int.to.str$ -- 117
+missing$ -- 117
+newline$ -- 595
+num.names$ -- 348
+pop$ -- 875
+preamble$ -- 1
+purify$ -- 116
+quote$ -- 0
+skip$ -- 1344
+stack$ -- 0
+substring$ -- 2984
+swap$ -- 355
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 803
+warning$ -- 8
+while$ -- 436
+width$ -- 0
+write$ -- 1532
+(There were 2 error messages)

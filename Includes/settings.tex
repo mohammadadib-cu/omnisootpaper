@@ -13,19 +13,19 @@
 \usepackage{float}
 \usepackage{tikz, graphicx}
 
-\usepackage{import}
+\usepackage{colortbl}
 
-\makeatletter
-\renewcommand*{\@fnsymbol}[1]{\ensuremath{\ifcase#1\or 1  \or  *  \else\@ctrerr\fi}}
+
+\usepackage{import}
 
 \makeatletter
 \newcounter{reaction}
 %%% >> for article <<
-%\renewcommand\thereaction{C\,\arabic{reaction}}
+\renewcommand\thereaction{R\,\arabic{reaction}}
 %%% << for article <<
 %%% >> for report and book >>
-\renewcommand\thereaction{R\,\thechapter.\arabic{reaction}}
-\@addtoreset{reaction}{chapter}
+%\renewcommand\thereaction{R\,\thechapter.\arabic{reaction}}
+%\@addtoreset{reaction}{chapter}
 %%% << for report and book <<
 \newcommand\reactiontag%
 {\refstepcounter{reaction}\tag{\thereaction}}
@@ -40,12 +40,12 @@
 \makeatother
 
 
-\newcommand{\changefont}{\fontsize{10}{11}\selectfont}
-\fancyhead[L]{\changefont \slshape \nouppercase \rightmark} %section
-\fancyhead[R]{\changefont \slshape \nouppercase \leftmark} %chapter
-\setlength{\headheight}{12.5pt}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\pagestyle{fancy}
+%\newcommand{\changefont}{\fontsize{10}{11}\selectfont}
+%\fancyhead[L]{\changefont \slshape \nouppercase \rightmark} %section
+%\fancyhead[R]{\changefont \slshape \nouppercase \leftmark} %chapter
+%\setlength{\headheight}{12.5pt}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%\pagestyle{fancy}
 
 % Index
 \usepackage{imakeidx}
@@ -75,9 +75,9 @@
 
 \usepackage{accsupp}
 \newcommand{\noncopynumber}[1]{%
-    \BeginAccSupp{method=escape,ActualText={}}%
-    #1%
-    \EndAccSupp{}%
+	\BeginAccSupp{method=escape,ActualText={}}%
+	#1%
+	\EndAccSupp{}%
 }
 
 \colorlet{mygray}{black!4}
@@ -88,7 +88,7 @@
 	language=C++,
 	basicstyle=\ttfamily\footnotesize,
 	keepspaces=true,
-  	columns=fixed,%fullflexible
+	columns=fixed,%fullflexible
 	fontadjust=true,
 	basewidth=0.5em,
 	backgroundcolor=\color{mygray},
@@ -109,7 +109,7 @@
 	language=C++,
 	basicstyle=\ttfamily\footnotesize,
 	keepspaces=true,
-  	columns=fixed,%fullflexible
+	columns=fixed,%fullflexible
 	fontadjust=true,
 	basewidth=0.5em,
 	backgroundcolor=\color{mygray},
@@ -157,28 +157,28 @@
 \usepackage{nomencl}
 \usepackage{ifthen}
 \renewcommand\nomgroup[1]{%				C - Constants
-\ifthenelse{\equal{#1}{C}}{%
-\vspace{0.5cm}%
-\item[\textbf{Constants}]}{%
-\ifthenelse{\equal{#1}{A}}{%
-\vspace{0.5cm}%
-\item[\textbf{Acronyms}]}{%              A - Acronyms
-\ifthenelse{\equal{#1}{E}}{%
-\vspace{0.5cm}%
-\item[{\textbf{English symbols}}]}{%           E - English
-\ifthenelse{\equal{#1}{G}}{%
-\vspace{0.5cm}
-\item[{\textbf{Greek symbols}}]}{%           G - Greek
-\ifthenelse{\equal{#1}{S}}{%
-\vspace{0.5cm}%	
-\item[\textbf{Superscripts}]}{%            S - Superscripts
-\ifthenelse{\equal{#1}{U}}{%
-\vspace{0.5cm}%	
-\item[\textbf{Subscripts}]}{%              U - Subscripts
-\ifthenelse{\equal{#1}{X}}{%
-\vspace{0.5cm}%	
-\item[\textbf{Other symbols}]}{%           X - Other Symbols
-{}}}}}}}}}
+	\ifthenelse{\equal{#1}{C}}{%
+		\vspace{0.5cm}%
+		\item[\textbf{Constants}]}{%
+		\ifthenelse{\equal{#1}{A}}{%
+			\vspace{0.5cm}%
+			\item[\textbf{Acronyms}]}{%              A - Acronyms
+			\ifthenelse{\equal{#1}{E}}{%
+				\vspace{0.5cm}%
+				\item[{\textbf{English symbols}}]}{%           E - English
+				\ifthenelse{\equal{#1}{G}}{%
+					\vspace{0.5cm}
+					\item[{\textbf{Greek symbols}}]}{%           G - Greek
+					\ifthenelse{\equal{#1}{S}}{%
+						\vspace{0.5cm}%	
+						\item[\textbf{Superscripts}]}{%            S - Superscripts
+						\ifthenelse{\equal{#1}{U}}{%
+							\vspace{0.5cm}%	
+							\item[\textbf{Subscripts}]}{%              U - Subscripts
+							\ifthenelse{\equal{#1}{X}}{%
+								\vspace{0.5cm}%	
+								\item[\textbf{Other symbols}]}{%           X - Other Symbols
+								{}}}}}}}}}
 \renewcommand*{\nompreamble}{\markboth{\nomname}{\nomname}}
 % \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\dotfill#1}}
