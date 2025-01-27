@@ -80,6 +80,12 @@ Similarly, the species equation for species $k$ is expressed as:
 	\label{eqn:speciesconstuv}.
 \end{equation}
 
+The transport equation for a generic soot variable, $\psi$ can be written as:
+\begin{equation}
+	\frac{d \psi}{d t}= S_{\psi} - \frac{\psi}{\rho} \sum_i \dot{s}_i W_i
+	\label{eqn:sootconstuv}.
+\end{equation}
+
 The energy balance for the gas mixture can be simplified to the rate change of temperature. An external heat source of $\mathrm{\dot{Q}}$ is considered to account for possible heat loss/gain of the reactor.
 \begin{equation}
 	\frac{d T}{d t}=
@@ -95,13 +101,16 @@ The energy balance for the gas mixture can be simplified to the rate change of t
 	\label{eqn:energyconstuv}.
 \end{equation}
 
+\subsection{Constant Pressure Reactor}
 
+This reactor is a closed system similar to CVR, but the pressure stays constant throughout the process and the boundaries of the system can move changing its volume. Fig.\ref{fig:pressurecv} shows an illustration of constant pressure reactor (CPR). The heat transfer can occur through reactor walls and soot particles, which changes the internal energy of gas mixture.
 
-The transport equation for a generic soot variable, $\psi$ can be written as:
-\begin{equation}
-	\frac{d \psi}{d t}= S_{\psi} - \frac{\psi}{\rho} \sum_i \dot{s}_i W_i
-	\label{eqn:sootconstuv}.
-\end{equation}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[height=60mm, ]{Figures/Theory/Pressure.pdf}
+	\caption{The schematics of control volume in the pressure reactor around the gas mixture excluding the soot particles. Mass and energy pass through the boundaries of gas and soot.}
+	\label{fig:pressurecv}
+\end{figure}
 
 \subsection{Perfectly Stirred Reactor}
 In this reactor, gas enters with a mass flow rate $\dot{m_{in}}$, composition of $Y^\ast$ and temperature of $T^\ast$, instantaneously mixes and homogeneously reacts with the mixture resident inside the reactor. The reacting gas reaches a spatially uniform temperature and composition described by $T$, and $Y$. It is assumed that temperature, composition and soot properties of the outflow are the same as reactor. Figure~\ref{fig:psrcv} illustrates the schematics of PSR. $\mathrm{\dot{m}_{in}}$ and $\mathrm{\dot{m}_{out}}$ refer to inflow and outflow gas mass flow rates, respectively. Under no-soot conditions, the inlet and outlet mass flow rates are equal, but the gas mixture loses mass by soot formation, so $\mathrm{\dot{m}_{out}}$ is slightly less than $\mathrm{\dot{m}_{in}}$. The pressure of reactor is assumed to stay constant during the process~\citep{kee2017chemically}. The nominal residence time of gas mixture in the reactor is defined as:
@@ -141,6 +150,19 @@ The density is not determined by solving the continuity equation, but rather fro
 	\label{eqn:speciespsr}.
 \end{equation}
 
+The soot transport equations can also be expressed as:
+\begin{equation}
+	\frac{d\psi}{dt}
+	=
+	\frac{{\dot{m}}_{in}}{\rho V
+		\left(1-\varphi\right)}
+	\left(\psi^\ast-\psi\right)
+	+
+	S_{\psi}
+	-\frac{1}{\rho}\psi\sum_{i}{{\dot{s}}_i W_i}
+	\label{eqn:sootpsr}.
+\end{equation}
+
 The energy equation for this reactor is written as:
 \begin{equation}
 	\begin{split}
@@ -170,18 +192,7 @@ The energy equation for this reactor is written as:
 		\label{eqn:energypsr}
 \end{equation}
 
-The soot transport equations can also be expressed as:
-\begin{equation}
-	\frac{d\psi}{dt}
-	=
-	\frac{{\dot{m}}_{in}}{\rho V
-	\left(1-\varphi\right)}
-	\left(\psi^\ast-\psi\right)
-	+
-	S_{\psi}
-	-\frac{1}{\rho}\psi\sum_{i}{{\dot{s}}_i W_i}
-	\label{eqn:sootpsr}.
-\end{equation}
+
 
 \subsection{Plug Flow Reactor}
 The plug flow reactor (PFR) is an ideal representation of a channel or duct with a constant cross-sectional area where a steady-state one-dimensional flow changes temperature, composition, and soot properties along the channel. There is no spatial gradient over the cross-section due to strong mixing. Diffusion along the channel is negligible. The pressure is assumed constant along the reactor.
@@ -202,7 +213,7 @@ The continuity equation for PFR is written as:
 The momentum equation can also be established as:
 \begin{equation}
 	u (1-\varphi) \sum_i \dot s_i W_i + \rho u (1-\varphi) \frac{du}{dz}
-	=-\frac{d}{dz}(P(1-\varphi))-\frac{\tau_{w}}{\mathrm{R_H}} 
+	=-\frac{d}{dz}(p(1-\varphi))-\frac{\tau_{w}}{\mathrm{R_H}} 
 	\label{eqn:momenpfr}.
 \end{equation}
 \noindent where $\tau_w$ is the wall shear the can be determined from fraction factor, $f$ as:
@@ -248,11 +259,12 @@ The energy equation can be expressed as:
 		\right. \\
 		\left.
 			+h_{soot}(1-\varphi)\sum_k \dot{s}_k W_k
-			+\dot{q}^\prime
+			+q^{\prime \prime}\frac{P_c}{A_c}
 		\right]
 	\end{split}
 	\label{eqn:energypfr}.
 \end{equation}
+\noindent where $q^{\prime \prime}$ is the wall heat flux provided as a function of reactor length or flow residence time that represents external heating or heat loss in the reactor.
 
 The soot transport equations can also be written as:
 \begin{equation}

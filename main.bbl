@@ -1,4 +1,4 @@
-\begin{thebibliography}{119}
+\begin{thebibliography}{115}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -830,34 +830,5 @@ GL~Agafonov, IV~Bilera, PA~Vlasov, IV~Zhil’tsova, Yu~A Kolbanovskii,
 \newblock Unified kinetic model of soot formation in the pyrolysis and
   oxidation of aliphatic and aromatic hydrocarbons in shock waves.
 \newblock \emph{Kinetics and Catalysis}, 57:\penalty0 557--572, 2016.
-
-\bibitem[Blanquart et~al.(2009)Blanquart, Pepiot-Desjardins, and
-  Pitsch]{blanquart2009chemical}
-G~Blanquart, P~Pepiot-Desjardins, and H~Pitsch.
-\newblock Chemical mechanism for high temperature combustion of engine relevant
-  fuels with emphasis on soot precursors.
-\newblock \emph{Combustion and Flame}, 156\penalty0 (3):\penalty0 588--607,
-  2009.
-
-\bibitem[Wang et~al.(2013)Wang, Raj, and Chung]{wang2013pah}
-Yu~Wang, Abhijeet Raj, and Suk~Ho Chung.
-\newblock A pah growth mechanism and synergistic effect on pah formation in
-  counterflow diffusion flames.
-\newblock \emph{Combustion and flame}, 160\penalty0 (9):\penalty0 1667--1676,
-  2013.
-
-\bibitem[Kellerer et~al.(1996)Kellerer, M{\"u}ller, Bauer, and
-  Wittig]{kellerer1996soot}
-H~Kellerer, A~M{\"u}ller, H-J Bauer, and S~Wittig.
-\newblock Soot formation in a shock tube under elevated pressure conditions.
-\newblock \emph{Combustion science and technology}, 113\penalty0 (1):\penalty0
-  67--80, 1996.
-
-\bibitem[Knorre et~al.(1996)Knorre, Tanke, Thienel, and Wagner]{knorre1996soot}
-V~Gg Knorre, Dietmar Tanke, Th~Thienel, and H~Gg Wagner.
-\newblock Soot formation in the pyrolysis of bezene/acetylene and
-  acetylene/hydrogen mixtures at high carbon concentrations.
-\newblock In \emph{Symposium (international) on combustion}, volume~26, pages
-  2303--2310. Elsevier, 1996.
 
 \end{thebibliography}
