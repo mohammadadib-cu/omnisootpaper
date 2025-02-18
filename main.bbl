@@ -1,4 +1,4 @@
-\begin{thebibliography}{115}
+\begin{thebibliography}{123}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -600,6 +600,13 @@ David~G. Goodwin, Harry~K. Moffat, Ingmar Schoegl, Raymond~L. Speth, and
 \newblock \url{https://www.cantera.org}, 2022.
 \newblock Version 2.6.0.
 
+\bibitem[Michelsen(2021)]{michelsen2021effects}
+Hope~A Michelsen.
+\newblock Effects of maturity and temperature on soot density and specific
+  heat.
+\newblock \emph{Proceedings of the Combustion Institute}, 38\penalty0
+  (1):\penalty0 1197--1205, 2021.
+
 \bibitem[Jensen et~al.(2007)Jensen, Suo-Anttila, and
   Blevins]{jensen2007measurement}
 Kirk~A Jensen, Jill~M Suo-Anttila, and Linda~G Blevins.
@@ -627,6 +634,13 @@ Skjalg~E Haaland.
   pipe flow.
 \newblock 1983.
 
+\bibitem[Berger and Hau(1977)]{berger1977mass}
+FP~Berger and K-FF-L Hau.
+\newblock Mass transfer in turbulent pipe flow measured by the electrochemical
+  method.
+\newblock \emph{International Journal of Heat and Mass Transfer}, 20\penalty0
+  (11):\penalty0 1185--1194, 1977.
+
 \bibitem[Mulholland et~al.(1988)Mulholland, Samson, Mountain, and
   Ernst]{mulholland1988cluster}
 George~W Mulholland, RJ~Samson, RD~Mountain, and MH~Ernst.
@@ -653,6 +667,34 @@ Jenny Rissler, Maria~E Messing, Azhar~I Malik, Patrik~T Nilsson, Erik~Z Nordin,
   sources and comparison to aggregation theory.
 \newblock \emph{Aerosol Science and Technology}, 47\penalty0 (7):\penalty0
   792--805, 2013.
+
+\bibitem[Narsimhan and Ruckenstein(1985)]{narsimhan1985brownian}
+Ganesan Narsimhan and Eli Ruckenstein.
+\newblock The brownian coagulation of aerosols over the entire range of knudsen
+  numbers: Connection between the sticking probability and the interaction
+  forces.
+\newblock \emph{Journal of colloid and interface science}, 104\penalty0
+  (2):\penalty0 344--369, 1985.
+
+\bibitem[D’Alessio et~al.(2005)D’Alessio, Barone, Cau, D’Anna, and
+  Minutolo]{d2005surface}
+Antonio D’Alessio, AC~Barone, R~Cau, Andrea D’Anna, and P~Minutolo.
+\newblock Surface deposition and coagulation efficiency of combustion generated
+  nanoparticles in the size range from 1 to 10 nm.
+\newblock \emph{Proceedings of the Combustion Institute}, 30\penalty0
+  (2):\penalty0 2595--2603, 2005.
+
+\bibitem[Wang and Kasper(1991)]{wang1991filtration}
+Hwa-Chi Wang and Gerhard Kasper.
+\newblock Filtration efficiency of nanometer-size aerosol particles.
+\newblock \emph{Journal of Aerosol Science}, 22\penalty0 (1):\penalty0 31--41,
+  1991.
+
+\bibitem[Hou et~al.(2020)Hou, Zong, Lindberg, Kraft, and
+  You]{hou2020coagulation}
+Dingyu Hou, Diyuan Zong, Casper~S Lindberg, Markus Kraft, and Xiaoqing You.
+\newblock On the coagulation efficiency of carbonaceous nanoparticles.
+\newblock \emph{Journal of Aerosol Science}, 140:\penalty0 105478, 2020.
 
 \bibitem[Ciajolo et~al.(1998)Ciajolo, Barbella, Tregrossi, and
   Bonfanti]{ciajolo1998spectroscopic}
@@ -800,6 +842,26 @@ Scott Stouffer, Richard Striebich, Joseph Zelina, and Charles Frayne.
 \newblock In \emph{38th AIAA/ASME/SAE/ASEE Joint Propulsion Conference \&
   Exhibit}, page 3723, 2002.
 
+\bibitem[Agafonov et~al.(2016)Agafonov, Bilera, Vlasov, Zhil’tsova,
+  Kolbanovskii, Smirnov, and Tereza]{agafonov2016unified}
+GL~Agafonov, IV~Bilera, PA~Vlasov, IV~Zhil’tsova, Yu~A Kolbanovskii,
+  VN~Smirnov, and AM~Tereza.
+\newblock Unified kinetic model of soot formation in the pyrolysis and
+  oxidation of aliphatic and aromatic hydrocarbons in shock waves.
+\newblock \emph{Kinetics and Catalysis}, 57:\penalty0 557--572, 2016.
+
+\bibitem[Lee and Tien(1981)]{lee1981optical}
+SC~Lee and CL~Tien.
+\newblock Optical constants of soot in hydrocarbon flames.
+\newblock In \emph{Symposium (international) on combustion}, volume~18, pages
+  1159--1166. Elsevier, 1981.
+
+\bibitem[Agafonov et~al.(2011)Agafonov, Vlasov, and Smirnov]{agafonov2011soot}
+GL~Agafonov, PA~Vlasov, and VN~Smirnov.
+\newblock Soot formation in the pyrolysis of benzene, methylbenzene, and
+  ethylbenzene in shock waves.
+\newblock \emph{Kinetics and Catalysis}, 52:\penalty0 358--370, 2011.
+
 \bibitem[Manzello et~al.(2007)Manzello, Lenhert, Yozgatligil, Donovan,
   Mulholland, Zachariah, and Tsang]{manzello2007soot}
 Samuel~L Manzello, David~B Lenhert, Ahmet Yozgatligil, Michael~T Donovan,
@@ -822,13 +884,5 @@ Junyu Mei, Mengda Wang, Xiaoqing You, and Chung~K Law.
   carbonaceous nanoparticles during ethylene pyrolysis in a laminar flow
   reactor.
 \newblock \emph{Combustion and Flame}, 200:\penalty0 15--22, 2019.
-
-\bibitem[Agafonov et~al.(2016)Agafonov, Bilera, Vlasov, Zhil’tsova,
-  Kolbanovskii, Smirnov, and Tereza]{agafonov2016unified}
-GL~Agafonov, IV~Bilera, PA~Vlasov, IV~Zhil’tsova, Yu~A Kolbanovskii,
-  VN~Smirnov, and AM~Tereza.
-\newblock Unified kinetic model of soot formation in the pyrolysis and
-  oxidation of aliphatic and aromatic hydrocarbons in shock waves.
-\newblock \emph{Kinetics and Catalysis}, 57:\penalty0 557--572, 2016.
 
 \end{thebibliography}
