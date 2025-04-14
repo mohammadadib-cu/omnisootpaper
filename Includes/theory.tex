@@ -242,7 +242,7 @@ The energy equation for this reactor is written as:
 
 
 \subsection{Plug Flow Reactor}
-The plug flow reactor (PFR) is an ideal representation of a channel or duct with a constant cross-sectional area where a steady-state one-dimensional flow changes temperature, composition, and soot properties along the channel. There is no spatial gradient over the cross-section due to strong mixing. Diffusion along the channel is negligible. The pressure is assumed constant along the reactor.
+The plug flow reactor (PFR) is an ideal representation of a channel or duct with a steady-state one-dimensional flow changes temperature, composition, and soot properties along the channel. The  There is no spatial gradient over the cross-section due to strong mixing. Diffusion along the channel is negligible. The pressure is assumed constant along the reactor.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[height=50mm, ]{Figures/Theory/PFR.pdf}
@@ -253,7 +253,7 @@ The plug flow reactor (PFR) is an ideal representation of a channel or duct with
 
 The continuity equation for PFR is written as:
 \begin{equation}
-	\frac{d}{dz}(\rho u(1-\varphi)) =(1-\varphi) \sum_i \dot s_i W_i
+	\frac{d\dot{m}}{dz} =(1-\varphi)A \sum_i \dot s_i W_i
 	\label{eqn:contpfr}.
 \end{equation}
 
@@ -330,7 +330,7 @@ The energy equation can be expressed as:
 		\right. \\
 		\left.
 			+h_{soot}(1-\varphi)\sum_k \dot{s}_k W_k
-			+q^{\prime \prime}\frac{P_c}{A_c}
+			+q^{\prime \prime}\frac{P_c}{A}
 		\right]
 	\end{split}
 	\label{eqn:energypfr}.
@@ -340,7 +340,7 @@ The energy equation can be expressed as:
 
 
 
-\section{Particle Dynamics}
+\subsection{Particle Dynamics}
 Population balance models rely on the Eulerian description of particles where bulk properties of particle population such as number density, mass or surface area are treated as continuous quantities and tracked by solving scalar transport equations. These methods are computationally cheaper compared with mesoscale models such as DEM, and can be easily interfaced with chemical kinetics in CFD solvers to simulate soot formation in turbulent configurations. Here, we use two particle dynamics models: a monodisperse population balance model (MPBM) based on four variables leading to 4 transport equations in total, and a fixed sectional population balance model (SPBM) tracking three variables per section. The total number of transport equations in the sectional model is determined by the number of sections and number of equations solved per section. The first two/three variables in the MPBM/SPBM enables description of number, mass, and evolving fractal-like morphology of soot agglomerates that are necessary to accurately predict collision frequency of agglomerates~\citep{mulholland1988cluster} as well as oxidation and surface growth rates~\citep{kelesidis2019estimating}. The last variable tracks the number of hydrogen atoms in agglomerates that allows the model to capture the soot composition, thereby its maturity~\citep{kholghy2016core}, and surface reactivity~\citep{blanquart2009analyzing}.  
 The tracked variables are used to address particle dynamics that includes (i) reconstructing particles morphology by determining characteristic diameters from tracked soot variables, (ii) calculating collision frequency and coagulation source term, (iii) combining the contribution of inception, PAH adsorption, surface growth and oxidation into source terms.
 First, common features of both particle dynamics models are reviewed. As mentioned before, any parameter with superscript i denotes the section number, which can be ignored/dropped for the MPBM that only has one section. For example, ${d^i_m}$ can be replaced with ${d_m}$.
@@ -959,7 +959,7 @@ Similarly, the agglomerates lose (carbon) mass by oxidation, and descend to the 
 	\label{eqn:S_Htot_oxsect}
 \end{equation}
 
-\section{Surface reactions model}
+\subsection{Surface reactions model}
 \label{sec:surfreacmodel}
 The heterogeneous surface reactions are described by hydrogen-abstraction-acetylene-addition (HACA) mechanism~\citep{frenklach1991detailed, appel2000kinetic}. The soot growth in HACA scheme is based on a sequential process similar to PAH growth. The hydrogenated arm-chair sites ($\mathrm{C_{soot}-H}$) on the edge of aromatic rings are dehydrogenated by H abstraction forming $\mathrm{C_{soot\mbox{\textdegree}}}$ that bonds with $\mathrm{C_2H_2}$ resulting in an additional aromatic ring with hydrogenated site. These sites can also be attacked by $\mathrm{O_2}$ or $\mathrm{OH}$. The elementary reactions that describe this sequential process are listed in Table~\ref{tab:HACA}.
 The rate of mass growth by HACA is obtained from the reaction of $\mathrm{C_2H_2}$ with dehydrogenated sites as:
@@ -1096,7 +1096,7 @@ We assume that oxidation does not change the number of surface hydrogen atoms. T
 	\label{eqn:OHrate_ox}.
 \end{equation}
 
-\section{PAH growth models}
+\subsection{PAH growth models}
 \label{sec:pahgrowmodel}
 Here, four different PAH growth models are used to describe the conversion of PAHs to incipient particles and their adsorption on existing agglomerates. As mentioned before, the soot inception and surface growth are not fully understood yet, but there is substantial evidence to support the collision of PAHs as a key step in inception and surface growth~\citep{zhao2003measurement, abid2009quantitative, happold2009soot}. So, global inception models have been developed based PAH collision consisting of different pathways with single or multiple steps. The collision frequency of gaseous species including PAH molecules and polymers depend on their mass and diameter, and it is obtained as:
 
@@ -1783,7 +1783,7 @@ The rate of removal of each PAH involved in soot inception and PAH adsorption an
 	\label{eqn:H2scrub_ebri}.
 \end{equation}
 
-\section{Gas scrubbing rates}
+\subsection{Gas scrubbing rates}
 
 The rate of production/destruction of species involved in soot formation must be taken into account to preserve the mass and energy balance in reactive systems. In order to do that, the production rate of gaseous species calculated by Cantera must be corrected for the rate of release/consumption due to PAH growth and surface reaction models.
 
