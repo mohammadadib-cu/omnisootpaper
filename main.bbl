@@ -1,4 +1,4 @@
-\begin{thebibliography}{120}
+\begin{thebibliography}{121}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -834,6 +834,14 @@ Jacob~W Martin, Dingyu Hou, Angiras Menon, Laura Pascazio, Jethro Akroyd,
   implications of localized $\pi$-radicals on rim-based pentagonal rings.
 \newblock \emph{The Journal of Physical Chemistry C}, 123\penalty0
   (43):\penalty0 26673--26682, 2019.
+
+\bibitem[Wang et~al.(2023)Wang, Han, Zirwes, Attili, Cai, Bockhorn, Yang, and
+  Chen]{wang2023systematic}
+Yiqing Wang, Wang Han, Thorsten Zirwes, Antonio Attili, Liming Cai, Henning
+  Bockhorn, Lijun Yang, and Zheng Chen.
+\newblock A systematic analysis of chemical mechanisms for ethylene oxidation
+  and pah formation.
+\newblock \emph{Combustion and Flame}, 253:\penalty0 112784, 2023.
 
 \bibitem[Agafonov et~al.(2016)Agafonov, Bilera, Vlasov, Zhil’tsova,
   Kolbanovskii, Smirnov, and Tereza]{agafonov2016unified}
