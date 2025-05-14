@@ -39,7 +39,7 @@ Here, the main conventions and assumptions used in the derivation of the mathema
 \begin{equation}
 	\begin{split}
 	d_{p,min}&=2~\mathrm{nm} \\
-	n_{c,min}& =\frac{\pi}{6}\rho_{soot}d^3_{p,min}\frac{1}{MW_{carbon}}\approx378
+	n_{c,min}& =\frac{\pi}{6}\rho_{soot}d^3_{p,min}\frac{1}{W_{carbon}}\approx378
 	\label{eqn:dp_min}.
 	\end{split}
 \end{equation}
@@ -409,7 +409,7 @@ Mobility and gyration diameters are calculated using power-laws developed to des
  Primary particle diameter, ${d^i_p}$, can be obtained from total carbon content and number density of primary particles using
 
 \begin{equation}
-	d^i_p = \left(\frac{6}{\pi} \frac{C^i_{tot}\cdot MW_{carbon}}{\rho_{soot}} \frac{1}{N^i_{pri}\cdot Av} \right)^{1/3}.
+	d^i_p = \left(\frac{6}{\pi} \frac{C^i_{tot}\cdot W_{carbon}}{\rho_{soot}} \frac{1}{N^i_{pri}\cdot Av} \right)^{1/3}.
 	\label{eqn:d_p}
 \end{equation}
 
@@ -1186,7 +1186,7 @@ The density of a PAH molecule is estimated using the relation proposed by \citet
 \begin{equation}
 	\rho_{PAH_j}= 
 	171943.5197
-	\frac{MW_{carbon}\cdot n_{C,PAH_j}+MW_{hydrogen}\cdot n_{H,PAH_j}}
+	\frac{W_{carbon}\cdot n_{C,PAH_j}+W_{hydrogen}\cdot n_{H,PAH_j}}
 	{n_{C,PAH_j}+n_{H,PAH_j}},
 	\label{eqn:rhoPAH}
 \end{equation}
@@ -1418,7 +1418,7 @@ The forward rate of PAH-soot collision is calculated from Equation~\eqref{eqn:be
 \end{equation}
 
 \begin{equation}
-	\epsilon_{soot,j} = cW_{soot,j} -d
+	\epsilon_{soot,j} = cMW_{soot,j} -d
 	\label{eqn:epsilonads_reacdim},
 \end{equation}
 
@@ -1428,7 +1428,7 @@ The values of a, b, c, d are the same as those used in inception. Computing ${\e
 	W^i_{soot}=\frac{C^i_{tot}W_{carbon}}{N^i_{agg}} 
 \end{equation}
 
-The rate constant of carbonization of $\mathrm{Soot-PAH^*_j}$ is defined as in the Arrhenius form similar to inception (Equation~\eqref{eqn:kc_reacdim}). The prefactor is adjusted based on matching the numercial PSD~\citep{naseri2022simulating} with measurements in the ethylene pyrolysis in a flow reactor~\cite{araki2021effects}. 
+The rate constant of carbonization of $\mathrm{Soot-PAH^*_j}$ is defined as in the Arrhenius form similar to inception (Equation~\eqref{eqn:kc_reacdim}). The prefactor is adjusted based on matching the numerical PSD~\citep{naseri2022simulating} with measurements in the ethylene pyrolysis in a flow reactor~\cite{araki2021effects}. 
 
 \begin{equation}
 	k_{c,dim} = 2\times10^{10}\cdot e^{(-96232/RT)}

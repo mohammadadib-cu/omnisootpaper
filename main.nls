@@ -12,21 +12,20 @@
 \nomgroup{E}
   \item [{$C_{tot}$}]\begingroup Total carbon content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}\nompageref{3}
   \item [{$D$}]\begingroup Diffusion coefficient of particles \nomunit{\si{\meter\squared\per\second}}\nomeqref {0}\nompageref{3}
-  \item [{$d$}]\begingroup diameter\nomunit{m}\nomeqref {0}\nompageref{3}
+  \item [{$d$}]\begingroup Diameter\nomunit{m}\nomeqref {0}\nompageref{3}
   \item [{$d_c$}]\begingroup Collision diameter \nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
   \item [{$d_g$}]\begingroup Gyration diameter \nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
   \item [{$D_H$}]\begingroup Duct hydraulic diameter \nomunit{\si{-}}\nomeqref {0}\nompageref{3}
   \item [{$d_m$}]\begingroup Mobility diameter \nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
   \item [{$d_p$}]\begingroup Primary particle diameter \nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
-  \item [{$E(m)$}]\begingroup Absorption function of soot\nomunit{-}\nomeqref {0}\nompageref{3}
+  \item [{$E(m)$}]\begingroup Absorption function of soot\nomunit{\si{-}}\nomeqref {0}\nompageref{3}
   \item [{$f$}]\begingroup Friction factor \nomunit{\si{-}}\nomeqref {0}\nompageref{3}
   \item [{$h$}]\begingroup Entalpy\nomunit{\si{J\per\kg}}\nomeqref {0}\nompageref{3}
   \item [{$H_{tot}$}]\begingroup Total hydrogen content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}\nompageref{3}
   \item [{$I$}]\begingroup Source terms for soot variables\nomunit{\si{\mol\per\kilogram\per\second}}\nomeqref {0}\nompageref{3}
-  \item [{$k$}]\begingroup reaction rate constant \nomunit{\si{\meter\cubed\per\mol\per\second}}\nomeqref {0}\nompageref{3}
+  \item [{$k$}]\begingroup Reaction rate constant \nomunit{\si{\meter\cubed\per\mol\per\second}}\nomeqref {0}\nompageref{3}
   \item [{$Kn$}]\begingroup Knudsen number \nomunit{\si{-}}\nomeqref {0}\nompageref{3}
-  \item [{$m$}]\begingroup mass\nomunit{\si{\kilogram}}\nomeqref {0}\nompageref{3}
-  \item [{$MW$}]\begingroup Molecular weight\nomunit{kg}\nomeqref {0}\nompageref{3}
+  \item [{$m$}]\begingroup Mass\nomunit{\si{\kilogram}}\nomeqref {0}\nompageref{3}
   \item [{$n_p$}]\begingroup Number of primary particles of per agglomerate\nomeqref {0}\nompageref{3}
   \item [{$N_{agg}$}]\begingroup Number density of agglomerates\nomunit{\si{mol\per\kg}}\nomeqref {0}\nompageref{3}
   \item [{$N_{pri}$}]\begingroup Number density of primary particles\nomunit{\si{mol\per\kg}}\nomeqref {0}\nompageref{3}
@@ -34,6 +33,7 @@
   \item [{$SF$}]\begingroup Sectional spacing factor \nomunit{\si{-}}\nomeqref {0}\nompageref{3}
   \item [{$T$}]\begingroup Temperature\nomunit{K}\nomeqref {0}\nompageref{3}
   \item [{$u$}]\begingroup Internal energy\nomunit{\si{J\per\kg}}\nomeqref {0}\nompageref{3}
+  \item [{$W$}]\begingroup Molecular weight\nomunit{kg/mol}\nomeqref {0}\nompageref{3}
 \nomgroup{G}
   \item [{$\beta$}]\begingroup Collision frequency\nomunit{\si{\metre^3\per\second}}\nomeqref {0}\nompageref{3}
   \item [{$\delta_a$}]\begingroup Mean distance of particles\nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
@@ -48,7 +48,7 @@
   \item [{agg}]\begingroup Agglomerate\nomeqref {0}\nompageref{3}
   \item [{coag}]\begingroup Coagulation\nomeqref {0}\nompageref{3}
   \item [{cont}]\begingroup Continuum\nomeqref {0}\nompageref{3}
-  \item [{f}]\begingroup forward\nomeqref {0}\nompageref{3}
+  \item [{f}]\begingroup Forward\nomeqref {0}\nompageref{3}
   \item [{fm}]\begingroup Free molecular\nomeqref {0}\nompageref{3}
   \item [{g}]\begingroup Gyration\nomeqref {0}\nompageref{3}
   \item [{grow}]\begingroup Surface growth\nomeqref {0}\nompageref{3}
@@ -56,7 +56,7 @@
   \item [{m}]\begingroup Mobility\nomeqref {0}\nompageref{3}
   \item [{ox}]\begingroup Oxidation\nomeqref {0}\nompageref{3}
   \item [{pri}]\begingroup Primary particle\nomeqref {0}\nompageref{3}
-  \item [{r}]\begingroup reverse\nomeqref {0}\nompageref{3}
-  \item [{reac}]\begingroup reactive\nomeqref {0}\nompageref{3}
+  \item [{r}]\begingroup Reverse\nomeqref {0}\nompageref{3}
+  \item [{reac}]\begingroup Reactive\nomeqref {0}\nompageref{3}
 
 \end{thenomenclature}
