@@ -41,6 +41,9 @@
 {\@ifstar{\reaction@nonumber}{\reaction@}}
 \makeatother
 
+\makeatletter
+\renewcommand*{\@fnsymbol}[1]{\ensuremath{\ifcase#1\or 1 \or* \or 3  \or  4 \else\@ctrerr\fi}}
+\makeatother
 
 %\newcommand{\changefont}{\fontsize{10}{11}\selectfont}
 %\fancyhead[L]{\changefont \slshape \nouppercase \rightmark} %section
@@ -189,4 +192,37 @@
 
 
 
+\usepackage{titlesec}
 
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% Define a command to reset counters and add 'S' prefix for Supplementary section
+\newcommand{\beginsupplement}{%
+	% Figures
+	\setcounter{figure}{0}%
+	\renewcommand{\thefigure}{S\arabic{figure}}%
+	% Tables
+	\setcounter{table}{0}%
+	\renewcommand{\thetable}{S\arabic{table}}%
+	% Equations
+	\setcounter{equation}{0}%
+	\renewcommand{\theequation}{S\arabic{equation}}%
+	% Sections
+	\setcounter{section}{0}%
+	\renewcommand{\thesection}{S\arabic{section}}%
+	% Pages
+	\setcounter{page}{1}%
+	\renewcommand{\thepage}{S.\arabic{page}}%
+	% Hyperref compatibility
+	\renewcommand{\theHfigure}{S\arabic{figure}}%
+	\renewcommand{\theHtable}{S\arabic{table}}%
+	\renewcommand{\theHequation}{S\arabic{equation}}%
+	\renewcommand{\theHsection}{S\arabic{section}}%
+	%\renewcommand{\theHpage}{S.\arabic{page}}%
+}
