@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 \begin{thebibliography}{124}
+=======
+\begin{thebibliography}{126}
+>>>>>>> f434d6ffaac87ffc6ae6c39a5e5c64c138ae7ff1
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +27,14 @@ Paul~JA Borm, Roel~PF Schins, and Catrin Albrecht.
   assessment.
 \newblock \emph{International journal of cancer}, 110\penalty0 (1):\penalty0
   3--14, 2004.
+
+\bibitem[Rosner et~al.(2024)Rosner, Bhagde, Slaughter, Zorba, and
+  Stokes-Draut]{rosner2024techno}
+Fabian Rosner, Trisha Bhagde, Daniel~S Slaughter, Vassilia Zorba, and Jennifer
+  Stokes-Draut.
+\newblock Techno-economic and carbon dioxide emission assessment of carbon
+  black production.
+\newblock \emph{Journal of Cleaner Production}, 436:\penalty0 140224, 2024.
 
 \bibitem[Association et~al.(2016)]{international2016carbon}
 International Carbon~Black Association et~al.
@@ -467,6 +479,20 @@ MA~Schiener and RP~Lindstedt.
   particle size distributions in non-premixed turbulent jet flames.
 \newblock \emph{Proceedings of the Combustion Institute}, 37\penalty0
   (1):\penalty0 1049--1056, 2019.
+
+\bibitem[Gelbard et~al.(1980)Gelbard, Tambour, and
+  Seinfeld]{gelbard1980sectional}
+Fred Gelbard, Yoram Tambour, and John~H Seinfeld.
+\newblock Sectional representations for simulating aerosol dynamics.
+\newblock \emph{Journal of colloid and interface science}, 76\penalty0
+  (2):\penalty0 541--556, 1980.
+
+\bibitem[Park and Rogak(2004)]{park2004novel}
+SH~Park and SN~Rogak.
+\newblock A novel fixed-sectional model for the formation and growth of aerosol
+  agglomerates.
+\newblock \emph{Journal of Aerosol Science}, 35\penalty0 (11):\penalty0
+  1385--1404, 2004.
 
 \bibitem[Matsoukas and Friedlander(1991)]{matsoukas1991dynamics}
 Themis Matsoukas and Sheldon~K Friedlander.
