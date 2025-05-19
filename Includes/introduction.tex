@@ -8,11 +8,21 @@ Soot is a broad-band light absorber~\cite{d2009combustion}, and is emitted in la
 	\centering
 	\begin{tikzpicture}
 		\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=0.8\textwidth]{Figures/Introduction/tlscales.jpg}};
-		\draw (-2.7, -1.4) node[text=magenta] {\scriptsize{\cite{commodo2019early}}};
-		\draw (-0.1, 0.9) node[text=red] {\scriptsize{\cite{schulz2019insights}}};
-		\draw (1.65, -0.23) node[text=green] {\scriptsize{\cite{schenk2013imaging}}};
-		\draw (3.15, 0.65) node[text=cyan] {\scriptsize{\cite{kholghy2021morphology}}};					
-		
+		\draw (-2.75, -1.4) node[text=magenta] {\scriptsize{
+				\citeColored{magenta}{commodo2019early}
+		}};
+		\draw (-0.25, 0.2) node[text=red] {\scriptsize{
+				\citeColored{red}{schulz2019insights}
+		}};
+		\draw (0.2, 0.15) node[text=green] {\scriptsize{
+				\citeColored{green}{schenk2013imaging}
+		}};
+		\draw (3.15, 0.65) node[text=cyan] {\scriptsize{
+				\citeColored{cyan}{kholghy2021morphology}
+		}};					
+		\draw (3.75, 3.5) node[text=orange] {\footnotesize{
+				\citeColored{orange}{johansson2017evolution}
+		}};		
 	\end{tikzpicture}
 	\caption{The time and length scales of the processes involved in soot formation spans over a wide range including molecular reactions between precursors, surface growth and coagulation of incipient and nascent soot particles and their maturity that depends on the temperature-time-history determined by flame velocity and temperature.}
 	\label{fig:sootscales}

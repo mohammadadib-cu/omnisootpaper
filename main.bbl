@@ -1,4 +1,4 @@
-\begin{thebibliography}{123}
+\begin{thebibliography}{124}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -67,6 +67,14 @@ M~Reza Kholghy and Valentina~G DeRosa.
 \newblock Morphology, composition and optical properties of jet engine-like
   soot made by a spray flame.
 \newblock \emph{Combustion and Flame}, 231:\penalty0 111480, 2021.
+
+\bibitem[Johansson et~al.(2017)Johansson, El~Gabaly, Schrader, Campbell, and
+  Michelsen]{johansson2017evolution}
+KO~Johansson, F~El~Gabaly, PE~Schrader, MF~Campbell, and HA~Michelsen.
+\newblock Evolution of maturity levels of the particle surface and bulk during
+  soot growth and oxidation in a flame.
+\newblock \emph{Aerosol Science and Technology}, 51\penalty0 (12):\penalty0
+  1333--1344, 2017.
 
 \bibitem[Dames et~al.(2023)Dames, Rohani, and Fulcheri]{dames2023plasma}
 Enoch Dames, Vandad Rohani, and Laurent Fulcheri.

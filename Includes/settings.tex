@@ -16,7 +16,7 @@
 \usepackage{tikz, graphicx}
 
 \usepackage{colortbl}
-
+%\usepackage[dvipsnames]{xcolor}
 
 \usepackage{import}
 
@@ -225,4 +225,10 @@
 	\renewcommand{\theHequation}{S\arabic{equation}}%
 	\renewcommand{\theHsection}{S\arabic{section}}%
 	%\renewcommand{\theHpage}{S.\arabic{page}}%
+}
+
+%-----------------------colored citation---------------------
+\newcommand{\citeColored}[2]{%
+	{\hypersetup{citecolor=#1}%
+		\cite{#2}}%
 }
