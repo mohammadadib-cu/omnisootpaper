@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-\begin{thebibliography}{124}
-=======
-\begin{thebibliography}{126}
->>>>>>> f434d6ffaac87ffc6ae6c39a5e5c64c138ae7ff1
+\begin{thebibliography}{128}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -874,6 +870,13 @@ Long Zhu, Snehasish Panigrahy, Sarah~N Elliott, Stephen~J Klippenstein,
 \newblock A wide range experimental study and further development of a kinetic
   model describing propane oxidation.
 \newblock \emph{Combustion and Flame}, 248:\penalty0 112562, 2023.
+
+\bibitem[Zhang et~al.(2023)Zhang, Dong, Vandewalle, Xu, Smith, and
+  Wang]{ZDV2023}
+Yue Zhang, Wendi Dong, Laurien Vandewalle, Rui Xu, Gregory Smith, and Hai Wang.
+\newblock Foundational {Fuel} {Chemistry} {Model} {Version} 2.0 ({FFCM}-2),
+  2023.
+\newblock URL \url{https://web.stanford.edu/group/haiwanglab/FFCM2}.
 
 \bibitem[Martin et~al.(2019)Martin, Hou, Menon, Pascazio, Akroyd, You, and
   Kraft]{martin2019reactivity}

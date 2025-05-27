@@ -171,6 +171,18 @@ Oxidation uses $\mathrm{O_2}$ and $\mathrm{OH}$ to remove carbon from soot parti
 
 \section{Validation of Mass and Energy Balance}
 
+\subsubsection{Constant Volume Reactor}
+The pyrolysis of 30\% $\mathrm{CH_4}$ diluted in $\mathrm{N_2}$ with the initial temperature and pressure of 2455 K and 3.47 atm, respectively, was simulated using CVR model for the residence time of 40 ms. The combination of available PAH growth and particle dynamics models leads to eight different cases that were simulated to ensure the conservation of mass and energy. Here, we focus on the total elemental balance of carbon and hydrogen because they are involved in soot processes. 
+Figure~\ref{fig:constuvvalid} demonstrates the relative error of total carbon, hydrogen and energy of system for different PAH growth and particle dynamics models in the constant pressure reactor that is less than $\mathrm{10^{-10}}$ for all parameters confirming the validity of model in satisfying the mass and energy balance.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figures/Results/Validation/ConstUV/relerr_constuv.pdf}
+	\caption{The relative error (residual) of total carbon (red line) and hydrogen (green line) mass, and total internal energy residual of gas and soot (blue line) plotted against residence time during pyrolysis of 30\% $\mathrm{CH_4}$-$\mathrm{N_2}$ at 2455 K and 3.47 atm in CVR simulated using different PAH growth models along with MPBM (solid line) and SPBM (dashed line).}
+	\label{fig:constuvvalid}
+\end{figure}
+
+
 \subsection{Constant Pressure Reactor}
 
 The pyrolysis of 5\% $\mathrm{CH_4}$-Ar in a shock-tube with post-reflected-shock temperature and pressure of $\mathrm{T_5}=$2355 K and $\mathrm{P_5}=$4.64 atm, respectively, was simulated using CPR model. Figure~\ref{fig:cprvalid} shows the relative error of total carbon, hydrogen and energy of system for different PAH growth and particle dynamics models in the constant volume that falls below $\mathrm{10^{-10}}$ for all parameters confirming the validity of model in satisfying the mass and energy balance in the constant pressure reactor using all models.

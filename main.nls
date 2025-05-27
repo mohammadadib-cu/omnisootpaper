@@ -8,7 +8,7 @@
   \item [{SPBM}]\begingroup Sectional Population Balance Model\nomeqref {0}\nompageref{3}
 \nomgroup{C}
   \item [{$Av$}]\begingroup Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}\nomeqref {0}\nompageref{3}
-  \item [{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{\metre^2 \kg \per \second^2-K}}\nomeqref {0}\nompageref{3}
+  \item [{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}\nomeqref {0}\nompageref{3}
 \nomgroup{E}
   \item [{$C_{tot}$}]\begingroup Total carbon content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}\nompageref{3}
   \item [{$D$}]\begingroup Diffusion coefficient of particles \nomunit{\si{\meter\squared\per\second}}\nomeqref {0}\nompageref{3}
@@ -41,7 +41,7 @@
   \item [{$\lambda_a$}]\begingroup Mean stopping distance of particles\nomunit{\si{\metre}}\nomeqref {0}\nompageref{3}
   \item [{$\nu$}]\begingroup Gas kinematic viscosity\nomunit{\si{\metre^2\per\second}}\nomeqref {0}\nompageref{3}
   \item [{$\rho$}]\begingroup Density\nomunit{\si{\kg\per\metre^3}}\nomeqref {0}\nompageref{3}
-  \item [{$\varphi$}]\begingroup Soot volume fraction based on reator volume\nomunit{\si{\kg\per\metre^3}}\nomeqref {0}\nompageref{3}
+  \item [{$\varphi$}]\begingroup Soot volume fraction based on reactor volume\nomunit{\si{\kg\per\metre^3}}\nomeqref {0}\nompageref{3}
   \item [{$f_v$}]\begingroup Soot volume fraction based on gas volume\nomunit{\si{\metre\cubed\per\metre\cubed}}\nomeqref {0}\nompageref{3}
 \nomgroup{U}
   \item [{ads}]\begingroup Adsorption\nomeqref {0}\nompageref{3}
