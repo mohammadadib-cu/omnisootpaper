@@ -1,4 +1,4 @@
-\begin{thebibliography}{128}
+\begin{thebibliography}{123}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -279,18 +279,11 @@ J{\"o}rg Appel, Henning Bockhorn, and Michael Frenklach.
 \newblock \emph{Combustion and flame}, 121\penalty0 (1-2):\penalty0 122--136,
   2000.
 
-\bibitem[Blanquart and Pitsch(2009{\natexlab{a}})]{blanquart2009joint}
-Guillaume Blanquart and Heinz Pitsch.
-\newblock A joint volume-surface-hydrogen multi-variate model for soot
-  formation.
-\newblock \emph{Combustion generated fine carbonaceous particles}, pages
-  437--463, 2009{\natexlab{a}}.
-
-\bibitem[Frenklach(2002)]{frenklach2002reaction}
+\bibitem[Frenklach(2002{\natexlab{a}})]{frenklach2002reaction}
 Michael Frenklach.
 \newblock Reaction mechanism of soot formation in flames.
 \newblock \emph{Physical chemistry chemical Physics}, 4\penalty0 (11):\penalty0
-  2028--2037, 2002.
+  2028--2037, 2002{\natexlab{a}}.
 
 \bibitem[Woods and Haynes(1991)]{woods1991soot}
 IT~Woods and BS~Haynes.
@@ -429,25 +422,11 @@ Arto~J Gr{\"o}hn, Sotiris~E Pratsinis, and Karsten Wegner.
   zro2.
 \newblock \emph{Chemical Engineering Journal}, 191:\penalty0 491--502, 2012.
 
-\bibitem[Pratsinis(1988)]{pratsinis1988simultaneous}
-Sotiris~E Pratsinis.
-\newblock Simultaneous nucleation, condensation, and coagulation in aerosol
-  reactors.
-\newblock \emph{Journal of colloid and interface science}, 124\penalty0
-  (2):\penalty0 416--427, 1988.
-
-\bibitem[Blanquart and Pitsch(2009{\natexlab{b}})]{blanquart2009analyzing}
-G~Blanquart and H~Pitsch.
-\newblock Analyzing the effects of temperature on soot formation with a joint
-  volume-surface-hydrogen model.
-\newblock \emph{Combustion and Flame}, 156\penalty0 (8):\penalty0 1614--1626,
-  2009{\natexlab{b}}.
-
-\bibitem[Frenklach and Harris(1987)]{frenklach1987aerosol}
-Michael Frenklach and Stephen~J Harris.
-\newblock Aerosol dynamics modeling using the method of moments.
-\newblock \emph{Journal of colloid and interface science}, 118\penalty0
-  (1):\penalty0 252--261, 1987.
+\bibitem[Frenklach(2002{\natexlab{b}})]{frenklach2002method}
+Michael Frenklach.
+\newblock Method of moments with interpolative closure.
+\newblock \emph{Chemical Engineering Science}, 57\penalty0 (12):\penalty0
+  2229--2239, 2002{\natexlab{b}}.
 
 \bibitem[Tsantilis and Pratsinis(2004)]{tsantilis2004soft}
 Stavros Tsantilis and Sotiris~E Pratsinis.
@@ -468,13 +447,6 @@ Yun Xiong and Sotiris~E Pratsinis.
   equation.
 \newblock \emph{J. Aerosol Sci.}, 24:\penalty0 283--300, 1993{\natexlab{a}}.
 \newblock ISSN 0021-8502.
-
-\bibitem[Schiener and Lindstedt(2019)]{schiener2019transported}
-MA~Schiener and RP~Lindstedt.
-\newblock Transported probability density function based modelling of soot
-  particle size distributions in non-premixed turbulent jet flames.
-\newblock \emph{Proceedings of the Combustion Institute}, 37\penalty0
-  (1):\penalty0 1049--1056, 2019.
 
 \bibitem[Gelbard et~al.(1980)Gelbard, Tambour, and
   Seinfeld]{gelbard1980sectional}
@@ -535,15 +507,6 @@ Fengshan Liu, Ahmet~E Karata{\c{s}}, {\"O}mer~L G{\"u}lder, and Mingyan Gu.
 \newblock \emph{Combustion and Flame}, 162\penalty0 (5):\penalty0 2231--2247,
   2015.
 
-\bibitem[Nobili et~al.(2022)Nobili, Pejpichestakul, Pelucchi, Cuoci,
-  Cavallotti, and Faravelli]{nobili2022modeling}
-Andrea Nobili, Warumporn Pejpichestakul, Matteo Pelucchi, Alberto Cuoci, Carlo
-  Cavallotti, and Tiziano Faravelli.
-\newblock Modeling soot particles as stable radicals: a chemical kinetic study
-  on formation and oxidation. part ii. soot oxidation in flow reactors and
-  laminar flames.
-\newblock \emph{Combustion and Flame}, 243:\penalty0 112072, 2022.
-
 \bibitem[Cuoci et~al.(2015)Cuoci, Frassoldati, Faravelli, and
   Ranzi]{cuoci2015opensmoke++}
 Alberto Cuoci, Alessio Frassoldati, Tiziano Faravelli, and Eliseo Ranzi.
@@ -558,6 +521,23 @@ Alberto Cuoci, Alessio Frassoldati, Tiziano Faravelli, and Eliseo Ranzi.
   flames: Application to c2h4/ch4 coflow flames.
 \newblock \emph{Combustion and Flame}, 160\penalty0 (5):\penalty0 870--886,
   2013.
+
+\bibitem[Ramalli et~al.(2023)Ramalli, Dinelli, Nobili, Stagni, Pernici, and
+  Faravelli]{ramalli2023automatic}
+Edoardo Ramalli, Timoteo Dinelli, Andrea Nobili, Alessandro Stagni, Barbara
+  Pernici, and Tiziano Faravelli.
+\newblock Automatic validation and analysis of predictive models by means of
+  big data and data science.
+\newblock \emph{Chemical Engineering Journal}, 454:\penalty0 140149, 2023.
+
+\bibitem[Nobili et~al.(2022)Nobili, Pejpichestakul, Pelucchi, Cuoci,
+  Cavallotti, and Faravelli]{nobili2022modeling}
+Andrea Nobili, Warumporn Pejpichestakul, Matteo Pelucchi, Alberto Cuoci, Carlo
+  Cavallotti, and Tiziano Faravelli.
+\newblock Modeling soot particles as stable radicals: a chemical kinetic study
+  on formation and oxidation. part ii. soot oxidation in flow reactors and
+  laminar flames.
+\newblock \emph{Combustion and Flame}, 243:\penalty0 112072, 2022.
 
 \bibitem[Goodwin et~al.(2022)Goodwin, Moffat, Schoegl, Speth, and
   Weber]{cantera}
@@ -591,11 +571,6 @@ Bonnie~J McBride.
 \newblock National Aeronautics and Space Administration, Office of
   Management~…, 1993.
 
-\bibitem[Kee et~al.(2017)Kee, Coltrin, Glarborg, and Zhu]{kee2017chemically}
-Robert~J Kee, Michael~E Coltrin, Peter Glarborg, and Huayang Zhu.
-\newblock \emph{Chemically reacting flow: theory, modeling, and simulation}.
-\newblock John Wiley \& Sons, 2017.
-
 \bibitem[Haaland(1983)]{haaland1983simple}
 Skjalg~E Haaland.
 \newblock Simple and explicit formulas for the friction factor in turbulent
@@ -620,6 +595,13 @@ Georgios~A Kelesidis and Sotiris~E Pratsinis.
 \newblock Estimating the internal and surface oxidation of soot agglomerates.
 \newblock \emph{Combustion and Flame}, 209:\penalty0 493--499, 2019.
 
+\bibitem[Blanquart and Pitsch(2009{\natexlab{a}})]{blanquart2009analyzing}
+G~Blanquart and H~Pitsch.
+\newblock Analyzing the effects of temperature on soot formation with a joint
+  volume-surface-hydrogen model.
+\newblock \emph{Combustion and Flame}, 156\penalty0 (8):\penalty0 1614--1626,
+  2009{\natexlab{a}}.
+
 \bibitem[Yon et~al.(2015)Yon, Bescond, and Ouf]{yon2015simple}
 Jer{\^o}me Yon, A~Bescond, and F-X Ouf.
 \newblock A simple semi-empirical model for effective density measurements of
@@ -635,109 +617,35 @@ Jenny Rissler, Maria~E Messing, Azhar~I Malik, Patrik~T Nilsson, Erik~Z Nordin,
 \newblock \emph{Aerosol Science and Technology}, 47\penalty0 (7):\penalty0
   792--805, 2013.
 
-\bibitem[Narsimhan and Ruckenstein(1985)]{narsimhan1985brownian}
-Ganesan Narsimhan and Eli Ruckenstein.
-\newblock The brownian coagulation of aerosols over the entire range of knudsen
-  numbers: Connection between the sticking probability and the interaction
-  forces.
-\newblock \emph{Journal of colloid and interface science}, 104\penalty0
-  (2):\penalty0 344--369, 1985.
-
-\bibitem[D’Alessio et~al.(2005)D’Alessio, Barone, Cau, D’Anna, and
-  Minutolo]{d2005surface}
-Antonio D’Alessio, AC~Barone, R~Cau, Andrea D’Anna, and P~Minutolo.
-\newblock Surface deposition and coagulation efficiency of combustion generated
-  nanoparticles in the size range from 1 to 10 nm.
-\newblock \emph{Proceedings of the Combustion Institute}, 30\penalty0
-  (2):\penalty0 2595--2603, 2005.
-
-\bibitem[Wang and Kasper(1991)]{wang1991filtration}
-Hwa-Chi Wang and Gerhard Kasper.
-\newblock Filtration efficiency of nanometer-size aerosol particles.
-\newblock \emph{Journal of Aerosol Science}, 22\penalty0 (1):\penalty0 31--41,
-  1991.
-
-\bibitem[Hou et~al.(2020)Hou, Zong, Lindberg, Kraft, and
-  You]{hou2020coagulation}
-Dingyu Hou, Diyuan Zong, Casper~S Lindberg, Markus Kraft, and Xiaoqing You.
-\newblock On the coagulation efficiency of carbonaceous nanoparticles.
-\newblock \emph{Journal of Aerosol Science}, 140:\penalty0 105478, 2020.
-
-\bibitem[Ciajolo et~al.(1998)Ciajolo, Barbella, Tregrossi, and
-  Bonfanti]{ciajolo1998spectroscopic}
-Anna Ciajolo, Rosalba Barbella, Antonio Tregrossi, and Loretta Bonfanti.
-\newblock Spectroscopic and compositional signatures of pah-loaded mixtures in
-  the soot inception region of a premixed ethylene flame.
-\newblock In \emph{Symposium (International) on Combustion}, volume~27, pages
-  1481--1487. Elsevier, 1998.
-
-\bibitem[Betrancourt et~al.(2017)Betrancourt, Liu, Desgroux, Mercier,
-  Faccinetto, Salamanca, Ruwe, Kohse-H{\"o}inghaus, Emmrich, Beyer,
-  et~al.]{betrancourt2017investigation}
-Christopher Betrancourt, Fengshan Liu, Pascale Desgroux, Xavier Mercier,
-  Alessandro Faccinetto, Maurin Salamanca, Lena Ruwe, Katharina
-  Kohse-H{\"o}inghaus, Daniel Emmrich, Andr{\'e} Beyer, et~al.
-\newblock Investigation of the size of the incandescent incipient soot
-  particles in premixed sooting and nucleation flames of n-butane using lii,
-  him, and 1 nm-smps.
-\newblock \emph{Aerosol Science and Technology}, 51\penalty0 (8):\penalty0
-  916--935, 2017.
-
-\bibitem[Michelsen(2017)]{michelsen2017probing}
-Hope~A Michelsen.
-\newblock Probing soot formation, chemical and physical evolution, and
-  oxidation: A review of in situ diagnostic techniques and needs.
-\newblock \emph{Proceedings of the Combustion Institute}, 36\penalty0
-  (1):\penalty0 717--735, 2017.
-
-\bibitem[Fuchs et~al.(1965)Fuchs, Daisley, Fuchs, Davies, and
-  Straumanis]{fuchs1965mechanics}
-Nikolaj~A Fuchs, RE~Daisley, Marina Fuchs, CN~Davies, and ME~Straumanis.
-\newblock The mechanics of aerosols, 1965.
-
 \bibitem[Wu and Flagan(1988)]{wu1988discrete}
 Jin~Jwang Wu and Richard~C Flagan.
 \newblock A discrete-sectional solution to the aerosol dynamic equation.
 \newblock \emph{Journal of Colloid and interface Science}, 123\penalty0
   (2):\penalty0 339--352, 1988.
 
-\bibitem[Park et~al.(2005)Park, Rogak, Bushe, Wen, and
-  Thomson]{park2005aerosol}
-SH~Park, SN~Rogak, WK~Bushe, JZ~Wen, and MJ~Thomson.
-\newblock An aerosol model to predict size and structure of soot particles.
-\newblock \emph{Combustion Theory and Modelling}, 9\penalty0 (3):\penalty0
-  499--513, 2005.
-
-\bibitem[Frenklach(2019)]{frenklach2019new}
-Michael Frenklach.
-\newblock New form for reduced modeling of soot oxidation: Accounting for
-  multi-site kinetics and surface reactivity.
-\newblock \emph{Combustion and Flame}, 201:\penalty0 148--159, 2019.
-
-\bibitem[Haynes and Wagner(1982)]{haynes1982surface}
-BS~Haynes and H~Gg Wagner.
-\newblock The surface growth phenomenon in soot formation.
-\newblock \emph{Zeitschrift f{\"u}r Physikalische Chemie}, 133\penalty0
-  (2):\penalty0 201--213, 1982.
-
-\bibitem[Harris and Weiner(1985)]{harris1985chemical}
-Stephen~J Harris and Anita~M Weiner.
-\newblock Chemical kinetics of soot particle growth.
-\newblock \emph{Annual Review of Physical Chemistry}, 36\penalty0 (1):\penalty0
-  31--52, 1985.
-
-\bibitem[Homann(1985)]{homann1985formation}
-KH~Homann.
-\newblock Formation of large molecules, particulates and ions in premixed
-  hydrocarbon flames; progress and unresolved questions.
-\newblock In \emph{Symposium (International) on Combustion}, volume~20, pages
-  857--870. Elsevier, 1985.
-
 \bibitem[Veshkini(2015)]{veshkini2015understanding}
 Armin Veshkini.
 \newblock \emph{Understanding Soot Particle Growth Chemistry and Particle
   Sizing Using a Novel Soot Growth and Formation Model}.
 \newblock University of Toronto (Canada), 2015.
+
+\bibitem[Kholghy and Kelesidis(2021)]{kholghy2021surface}
+M~Reza Kholghy and Georgios~A Kelesidis.
+\newblock Surface growth, coagulation and oxidation of soot by a monodisperse
+  population balance model.
+\newblock \emph{Combustion and Flame}, 227:\penalty0 456--463, 2021.
+
+\bibitem[Fuchs et~al.(1965)Fuchs, Daisley, Fuchs, Davies, and
+  Straumanis]{fuchs1965mechanics}
+Nikolaj~A Fuchs, RE~Daisley, Marina Fuchs, CN~Davies, and ME~Straumanis.
+\newblock The mechanics of aerosols, 1965.
+
+\bibitem[Blanquart and Pitsch(2009{\natexlab{b}})]{blanquart2009joint}
+Guillaume Blanquart and Heinz Pitsch.
+\newblock A joint volume-surface-hydrogen multi-variate model for soot
+  formation.
+\newblock \emph{Combustion generated fine carbonaceous particles}, pages
+  437--463, 2009{\natexlab{b}}.
 
 \bibitem[Zhao et~al.(2003)Zhao, Yang, Johnston, Wang, Wexler, Balthasar, and
   Kraft]{zhao2003measurement}
@@ -765,54 +673,41 @@ K~Olof Johansson, Tyler Dillstrom, Matteo Monti, Farid El~Gabaly, Matthew~F
 \newblock \emph{Proceedings of the National Academy of Sciences}, 113\penalty0
   (30):\penalty0 8374--8379, 2016.
 
-\bibitem[Miller et~al.(1984)Miller, Mallard, and
-  Smyth]{miller1984intermolecular}
-J~Houston Miller, W~Gary Mallard, and Kermit~C Smyth.
-\newblock Intermolecular potential calculations for polycyclic aromatic
-  hydrocarbons.
-\newblock \emph{The Journal of Physical Chemistry}, 88\penalty0 (21):\penalty0
-  4963--4970, 1984.
+\bibitem[Frenklach(2019)]{frenklach2019new}
+Michael Frenklach.
+\newblock New form for reduced modeling of soot oxidation: Accounting for
+  multi-site kinetics and surface reactivity.
+\newblock \emph{Combustion and Flame}, 201:\penalty0 148--159, 2019.
 
-\bibitem[Miller(1991)]{miller1991kinetics}
-J~Houston Miller.
-\newblock The kinetics of polynuclear aromatic hydrocarbon agglomeration in
-  flames.
-\newblock In \emph{Symposium (International) on Combustion}, volume~23, pages
-  91--98. Elsevier, 1991.
+\bibitem[Haynes and Wagner(1982)]{haynes1982surface}
+BS~Haynes and H~Gg Wagner.
+\newblock The surface growth phenomenon in soot formation.
+\newblock \emph{Zeitschrift f{\"u}r Physikalische Chemie}, 133\penalty0
+  (2):\penalty0 201--213, 1982.
 
-\bibitem[Araki et~al.(2021)Araki, Matsukawa, Saito, Matsushita, Aoki, Era, and
-  Aoki]{araki2021effects}
-Yoichiro Araki, Yoshiya Matsukawa, Yasuhiro Saito, Yohsuke Matsushita, Hideyuki
-  Aoki, Koki Era, and Takayuki Aoki.
-\newblock Effects of carrier gas on the properties of soot produced by ethylene
-  pyrolysis.
-\newblock \emph{Fuel Processing Technology}, 213:\penalty0 106673, 2021.
+\bibitem[Harris and Weiner(1985)]{harris1985chemical}
+Stephen~J Harris and Anita~M Weiner.
+\newblock Chemical kinetics of soot particle growth.
+\newblock \emph{Annual Review of Physical Chemistry}, 36\penalty0 (1):\penalty0
+  31--52, 1985.
 
-\bibitem[Sun et~al.(2021)Sun, Rigopoulos, and Liu]{sun2021modelling}
-Binxuan Sun, Stelios Rigopoulos, and Anxiong Liu.
-\newblock Modelling of soot coalescence and aggregation with a two-population
-  balance equation model and a conservative finite volume method.
-\newblock \emph{Combustion and Flame}, 229:\penalty0 111382, 2021.
+\bibitem[Homann(1985)]{homann1985formation}
+KH~Homann.
+\newblock Formation of large molecules, particulates and ions in premixed
+  hydrocarbon flames; progress and unresolved questions.
+\newblock In \emph{Symposium (International) on Combustion}, volume~20, pages
+  857--870. Elsevier, 1985.
 
-\bibitem[Tregrossi et~al.(1999)Tregrossi, Ciajolo, and
-  Barbella]{tregrossi1999combustion}
-A~Tregrossi, A~Ciajolo, and R~Barbella.
-\newblock The combustion of benzene in rich premixed flames at atmospheric
-  pressure.
-\newblock \emph{Combustion and flame}, 117\penalty0 (3):\penalty0 553--561,
-  1999.
-
-\bibitem[Kholghy and Kelesidis(2021)]{kholghy2021surface}
-M~Reza Kholghy and Georgios~A Kelesidis.
-\newblock Surface growth, coagulation and oxidation of soot by a monodisperse
-  population balance model.
-\newblock \emph{Combustion and Flame}, 227:\penalty0 456--463, 2021.
-
-\bibitem[Vemury and Pratsinis(1995)]{vemury1995self}
-Srinivas Vemury and Sotiris~E Pratsinis.
-\newblock Self-preserving size distributions of agglomerates.
-\newblock \emph{Journal of Aerosol Science}, 26\penalty0 (2):\penalty0
-  175--185, 1995.
+\bibitem[Shepherd et~al.(2022)Shepherd, King, Rennie, Ward, Frey, Brough,
+  Eveson, Del~Vento, Milsom, Pfrang, et~al.]{shepherd2022measurement}
+Rosalie~H Shepherd, Martin~D King, Adrian~R Rennie, Andrew~D Ward, Markus~M
+  Frey, Neil Brough, Joshua Eveson, Sabino Del~Vento, Adam Milsom, Christian
+  Pfrang, et~al.
+\newblock Measurement of gas-phase oh radical oxidation and film thickness of
+  organic films at the air--water interface using material extracted from
+  urban, remote and wood smoke aerosol.
+\newblock \emph{Environmental Science: Atmospheres}, 2\penalty0 (4):\penalty0
+  574--590, 2022.
 
 \bibitem[Goudeli et~al.(2015)Goudeli, Eggersdorfer, and
   Pratsinis]{goudeli2015coagulation}
@@ -821,6 +716,12 @@ Eirini Goudeli, Maximilian~L Eggersdorfer, and Sotiris~E Pratsinis.
   self-preserving size distribution.
 \newblock \emph{Langmuir}, 31\penalty0 (4):\penalty0 1320--1327, 2015.
 
+\bibitem[Vemury and Pratsinis(1995)]{vemury1995self}
+Srinivas Vemury and Sotiris~E Pratsinis.
+\newblock Self-preserving size distributions of agglomerates.
+\newblock \emph{Journal of Aerosol Science}, 26\penalty0 (2):\penalty0
+  175--185, 1995.
+
 \bibitem[Wang et~al.(2023)Wang, Han, Zirwes, Attili, Cai, Bockhorn, Yang, and
   Chen]{wang2023systematic}
 Yiqing Wang, Wang Han, Thorsten Zirwes, Antonio Attili, Liming Cai, Henning
@@ -828,6 +729,12 @@ Yiqing Wang, Wang Han, Thorsten Zirwes, Antonio Attili, Liming Cai, Henning
 \newblock A systematic analysis of chemical mechanisms for ethylene oxidation
   and pah formation.
 \newblock \emph{Combustion and Flame}, 253:\penalty0 112784, 2023.
+
+\bibitem[Martin et~al.(2022)Martin, Salamanca, and Kraft]{martin2022soot}
+Jacob~W Martin, Maurin Salamanca, and Markus Kraft.
+\newblock Soot inception: Carbonaceous nanoparticle formation in flames.
+\newblock \emph{Progress in Energy and Combustion Science}, 88:\penalty0
+  100956, 2022.
 
 \bibitem[Blanquart et~al.(2009)Blanquart, Pepiot-Desjardins, and
   Pitsch]{blanquart2009chemical}
@@ -862,30 +769,12 @@ Maximilian Hellmuth, Raymond Langer, Anita Meraviglia, Joachim Beeckmann, and
 \newblock \emph{Proceedings of the Combustion Institute}, 40\penalty0
   (1-4):\penalty0 105620, 2024.
 
-\bibitem[Zhu et~al.(2023)Zhu, Panigrahy, Elliott, Klippenstein, Baigmohammadi,
-  Mohamed, Hargis, Alturaifi, Mathieu, Petersen, et~al.]{zhu2023wide}
-Long Zhu, Snehasish Panigrahy, Sarah~N Elliott, Stephen~J Klippenstein,
-  Mohammadreza Baigmohammadi, A~Abd El-Sabor Mohamed, Joshua~W Hargis, Sulaiman
-  Alturaifi, Olivier Mathieu, Eric~L Petersen, et~al.
-\newblock A wide range experimental study and further development of a kinetic
-  model describing propane oxidation.
-\newblock \emph{Combustion and Flame}, 248:\penalty0 112562, 2023.
-
 \bibitem[Zhang et~al.(2023)Zhang, Dong, Vandewalle, Xu, Smith, and
   Wang]{ZDV2023}
 Yue Zhang, Wendi Dong, Laurien Vandewalle, Rui Xu, Gregory Smith, and Hai Wang.
 \newblock Foundational {Fuel} {Chemistry} {Model} {Version} 2.0 ({FFCM}-2),
   2023.
 \newblock URL \url{https://web.stanford.edu/group/haiwanglab/FFCM2}.
-
-\bibitem[Martin et~al.(2019)Martin, Hou, Menon, Pascazio, Akroyd, You, and
-  Kraft]{martin2019reactivity}
-Jacob~W Martin, Dingyu Hou, Angiras Menon, Laura Pascazio, Jethro Akroyd,
-  Xiaoqing You, and Markus Kraft.
-\newblock Reactivity of polycyclic aromatic hydrocarbon soot precursors:
-  implications of localized $\pi$-radicals on rim-based pentagonal rings.
-\newblock \emph{The Journal of Physical Chemistry C}, 123\penalty0
-  (43):\penalty0 26673--26682, 2019.
 
 \bibitem[Agafonov et~al.(2016)Agafonov, Bilera, Vlasov, Zhil’tsova,
   Kolbanovskii, Smirnov, and Tereza]{agafonov2016unified}
@@ -929,6 +818,78 @@ David~B Lenhert and Samuel~L Manzello.
   well-stirred reactor/plug flow reactor.
 \newblock \emph{Proceedings of the Combustion Institute}, 32\penalty0
   (1):\penalty0 657--664, 2009.
+
+\bibitem[Park et~al.(2005)Park, Rogak, Bushe, Wen, and
+  Thomson]{park2005aerosol}
+SH~Park, SN~Rogak, WK~Bushe, JZ~Wen, and MJ~Thomson.
+\newblock An aerosol model to predict size and structure of soot particles.
+\newblock \emph{Combustion Theory and Modelling}, 9\penalty0 (3):\penalty0
+  499--513, 2005.
+
+\bibitem[Narsimhan and Ruckenstein(1985)]{narsimhan1985brownian}
+Ganesan Narsimhan and Eli Ruckenstein.
+\newblock The brownian coagulation of aerosols over the entire range of knudsen
+  numbers: Connection between the sticking probability and the interaction
+  forces.
+\newblock \emph{Journal of colloid and interface science}, 104\penalty0
+  (2):\penalty0 344--369, 1985.
+
+\bibitem[D’Alessio et~al.(2005)D’Alessio, Barone, Cau, D’Anna, and
+  Minutolo]{d2005surface}
+Antonio D’Alessio, AC~Barone, R~Cau, Andrea D’Anna, and P~Minutolo.
+\newblock Surface deposition and coagulation efficiency of combustion generated
+  nanoparticles in the size range from 1 to 10 nm.
+\newblock \emph{Proceedings of the Combustion Institute}, 30\penalty0
+  (2):\penalty0 2595--2603, 2005.
+
+\bibitem[Wang and Kasper(1991)]{wang1991filtration}
+Hwa-Chi Wang and Gerhard Kasper.
+\newblock Filtration efficiency of nanometer-size aerosol particles.
+\newblock \emph{Journal of Aerosol Science}, 22\penalty0 (1):\penalty0 31--41,
+  1991.
+
+\bibitem[Hou et~al.(2020)Hou, Zong, Lindberg, Kraft, and
+  You]{hou2020coagulation}
+Dingyu Hou, Diyuan Zong, Casper~S Lindberg, Markus Kraft, and Xiaoqing You.
+\newblock On the coagulation efficiency of carbonaceous nanoparticles.
+\newblock \emph{Journal of Aerosol Science}, 140:\penalty0 105478, 2020.
+
+\bibitem[Miller et~al.(1984)Miller, Mallard, and
+  Smyth]{miller1984intermolecular}
+J~Houston Miller, W~Gary Mallard, and Kermit~C Smyth.
+\newblock Intermolecular potential calculations for polycyclic aromatic
+  hydrocarbons.
+\newblock \emph{The Journal of Physical Chemistry}, 88\penalty0 (21):\penalty0
+  4963--4970, 1984.
+
+\bibitem[Miller(1991)]{miller1991kinetics}
+J~Houston Miller.
+\newblock The kinetics of polynuclear aromatic hydrocarbon agglomeration in
+  flames.
+\newblock In \emph{Symposium (International) on Combustion}, volume~23, pages
+  91--98. Elsevier, 1991.
+
+\bibitem[Araki et~al.(2021)Araki, Matsukawa, Saito, Matsushita, Aoki, Era, and
+  Aoki]{araki2021effects}
+Yoichiro Araki, Yoshiya Matsukawa, Yasuhiro Saito, Yohsuke Matsushita, Hideyuki
+  Aoki, Koki Era, and Takayuki Aoki.
+\newblock Effects of carrier gas on the properties of soot produced by ethylene
+  pyrolysis.
+\newblock \emph{Fuel Processing Technology}, 213:\penalty0 106673, 2021.
+
+\bibitem[Sun et~al.(2021)Sun, Rigopoulos, and Liu]{sun2021modelling}
+Binxuan Sun, Stelios Rigopoulos, and Anxiong Liu.
+\newblock Modelling of soot coalescence and aggregation with a two-population
+  balance equation model and a conservative finite volume method.
+\newblock \emph{Combustion and Flame}, 229:\penalty0 111382, 2021.
+
+\bibitem[Tregrossi et~al.(1999)Tregrossi, Ciajolo, and
+  Barbella]{tregrossi1999combustion}
+A~Tregrossi, A~Ciajolo, and R~Barbella.
+\newblock The combustion of benzene in rich premixed flames at atmospheric
+  pressure.
+\newblock \emph{Combustion and flame}, 117\penalty0 (3):\penalty0 553--561,
+  1999.
 
 \bibitem[Stouffer et~al.(2002)Stouffer, Striebich, Zelina, and
   Frayne]{stouffer2002combustion}

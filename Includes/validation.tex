@@ -1,39 +1,17 @@
 \section{Code Validation}
-A set of simulations was performed to ensure the accuracy and reliability of omnisoot for prediction of soot formation. Aerosol dynamics is validated by comparing the results of population balance models implemented in omnisoot with those of DEM simulations from literature. Carbon and hydrogen mass and energy balance is also rigorously evaluated to ensure that residuals fall within the bounds of acceptable numerical error.
-
-
-
-
+A set of simulations was performed to evaluate the accuracy and reliability of Omnisoot in predicting soot formation. The aerosol dynamics models were validated by comparing the results of the population balance models implemented in Omnisoot with discrete element method (DEM) simulations reported in the literature. In addition, carbon and hydrogen mass and energy balances were rigorously assessed to ensure that residuals remain within the bounds of acceptable numerical error.
 
 \subsection{Coagulation}
-A test case\footnote{\href{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/free_molecular}{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/free\_molecular}} was designed and conducted to validate the coagulation sub-model of both particle dynamics models, MPBM and SPBM, in the free molecular regime by comparing the results of omnisoot with those of DEM~\citep{kholghy2021surface}. The constant volume reactor was used for this test case, but it will be applicable to other reactors and flame models as long as the particle residence time matches with the values obtained by DEM. An adiabatic reactor with the volume of 1 $\mathrm{m^3}$ is initialized with $2.6261\times10^{18}$ spherical particles 2 nm in diameter. The initial conditions are indicated in Table~\ref{tab:simcond_coagtest}. The particles coagulate in the free molecular regime and grow in size without inception and surface growth. Figure~\ref{fig:coagvalid_Nd} demonstrates ${N_{agg}}$, ${N_{pri}}$, ${d_m}$, ${d_g}$ of particles obtained by omnisoot that are in good agreement with DEM results~\citep{kholghy2021surface}. ${N_{pri}}$ is conserved during coagulation resulting in identical flat lines for both particle dynamics models, but ${N_{agg}}$ declines over time with the higher decay rate for SPBM because it accounts for the polydispersity of agglomerates that results in larger collision frequency compared to MPBM. Therefore, mean mobility and gyration diameter of SPBM (red lines in Figure~\ref{fig:coagvalid_Nd}b) are slightly larger than those of MPBM (blue line of the same figure).
+The collision kernels and their corresponding interpolation schemes implemented in Omnisoot were validated by comparing the computed collision frequencies across a wide range of Knudsen numbers with reference DEM results~\citep{goudeli2015coagulation} shown in Figure~\ref{fig:kernelvalid}.
+Additionally, two test cases were set up to validate the coagulation sub-model of MPBM and SPBM in the free-molecular\footnote{\href{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/free_molecular}{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/free\_molecular}} and continuum \footnote{\href{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}} regimes. An adiabatic CVR with a volume of 1~$\mathrm{m}^3$ was initialized with $2.6261 \times 10^{18}$ spherical particles with the initial diameter of 2~nm and 668~nm for the free-molecular and continuum cases, respectively. The initial temperature in the free-molecular and continuum simulations are 1800~K and 300~K, respectively.
+ 
+The particles collide and grow in size through coagulation in both simulations, without inception, surface growth, or oxidation. Figure~\ref{fig:coagvalid_Nd} demonstrates the evolution of ${N_{agg}}$, ${N_{pri}}$, ${d_m}$, and ${d_g}$ as predicted by MPBM and SPBM in the free-molecular regime, which are in good agreement with DEM results~\citep{kholghy2021surface}. ${N_{pri}}$ is conserved during coagulation, resulting in identical flat trends for both models. In contrast, ${N_{agg}}$ decreases over time, with a faster decay observed in SPBM due to its treatment of agglomerate polydispersity, which leads to a higher collision frequency compared to MPBM. Therefore, $d_m$ and $d_g$  predicted by SPBM, shown in Figure~\ref{fig:coagvalid_Nd}b, are slightly larger than those predicted by MPBM.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Figures/Results/Validation/Coagulation/coagulation_scheme.pdf}
-	\caption{The schematic of agglomeration process in the coagulation test cases where initially spherical particle collide and form agglomerate}
-	\label{fig:coagscheme}
-\end{figure}
 
-MPBM model cannot resolve PSD because of the monodispersity assumption. In contrast, SPBM tracks the number concentration of particles in separate sections that can be used to construct evolving PSD and calculate mean properties and determine the spread of size distribution of particles during coagulation. Figure~\ref{fig:coagvalid_sigmapsd}a shows the standard deviation of mobility diameter, ${\sigma_g}$, predicted by SPBM in close agreement with DEM results. ${\sigma_g}$ starts from unity indicating a monodisperse population at the beginning of simulation, and it finally reaches 2.03 that is the signature standard deviation of the free molecular regime~\citep{vemury1995self}. Figure~\ref{fig:coagvalid_sigmapsd} demonstrates the evolution of non-dimensional PSD from $t=$1 ms to 677 ms. The PSD is plotted for the normalized concentration, ${\Psi= \bar{v}n_{agg}(v,t)/N_{agg,\infty}}$ and dimensionless volume, ${\eta= v/ \bar{v}}$, where ${n_{agg}(v,t)}$ is the size distribution function of agglomerate, ${v}$ particle volume, ${\bar{v}}$ mean particle volume, ${N_{agg,\infty}}$ total number concentration of agglomerates. For short residence times, $t\approx$4 ms, the PSD resembles a half bell curve because the majority of particles has sizes close to ${d_0=}$2 nm with the average volume close to the minimum volume, so the particles with ${\eta\approx1}$ has the largest concentration. As particles grow by coagulation, the PSD rapidly transitions to a full bell-curve ($\mathrm{t\ge}$22 ms) and does not change for longer residence times, $\mathrm{t\ge}$447 ms marking the attainment of SPSD in a good agreement with DEM results. This confirms the capability of SPBM implemented in omnisoot to capture SPSD for soot agglomerates as a signature of Brownian-driven particle coagulation.  
+The MPBM model cannot resolve the particle size distribution (PSD) due to the monodispersity assumption. In contrast, the SPBM tracks the number concentration of particles in discrete sections, allowing the construction of an evolving PSD, calculation of mean properties, and assessment of the size distribution spread during coagulation. Figure~\ref{fig:coagvalid_psd} shows the evolution of the non-dimensional particle size distribution (PSD) from $t=$1 ms to 500 ms for the free-molecular and continuum simulations. The PSD is plotted as a function of the normalized concentration, ${\Psi= \bar{v}n_{agg}(v,t)/N_{agg,\infty}}$ and dimensionless volume, ${\eta= v/ \bar{v}}$, where ${n_{agg}(v,t)}$ is the size distribution function of agglomerate, ${v}$ is particle volume, ${\bar{v}}$ is mean particle volume, ${N_{agg,\infty}}$ is the total number concentration of agglomerates. After the initial transient ($t>22$~ms), the PSD rapidly evolves into a full bell curve and remains unchanged, indicating the attainment of a self-preserving size distribution (SPSD). This behavior is in good agreement with DEM results and confirms the capability of the SPBM implemented in Omnisoot to capture SPSD for soot agglomerates in the free-molecular and continuum regimes, a characteristic outcome of Brownian-driven particle coagulation.
 
-\begin{table}
-	\caption{The simulations conditions of the coagulation test case~\citep{kholghy2021surface}}
-	\label{tab:simcond_coagtest}
-	\centering
-	\begin{tabular}{l l}
-		\hline
-		\textbf{Property} & \textbf{Value} \\
-		\hline
-		Composition & $\mathrm{CH_4}$:0.425, $\mathrm{O_2}$:0.435, $\mathrm{N_2}$:0.14\\
-		T & 1830 K\\
-		P & 1 atm \\
-		${N^1_{agg}}$ & $3.514\times10^{-5} \mathrm{mol/kg}$ \\ 
-		${N^1_{pri}}$ & $3.514\times10^{-5} \mathrm{mol/kg}$\\
-		${d^1_{p}}$ & 2 nm \\
-		\hline
-	\end{tabular}
-\end{table}
+
+Figure~\ref{fig:coagvalid_psd}a shows the standard deviation of the mobility diameter, ${\sigma_g}$, predicted by SPBM in the free-molecular regime, which is in close agreement with DEM results. Initially, ${\sigma_g}=1$, indicating a monodisperse population, and it gradually increases, reaching a final value of 2.03, which corresponds to the characteristic standard deviation for the free-molecular regime~\citep{vemury1995self}.
 
 
 \begin{figure}[H]
@@ -50,7 +28,8 @@ MPBM model cannot resolve PSD because of the monodispersity assumption. In contr
 			\draw (2.2, -1.22) node {\scriptsize{\cite{kholghy2021surface}}};
 		\end{tikzpicture}
 	\end{subfigure}
-	\caption{The total number concentration of agglomerates and primary particles (a), and mobility and gyration diameter (b) obtained with omnisoot using MPBM and SPBM that are in close agreement with the DEM results~\citep{kholghy2021surface} indicating the validation of coagulation sub-model}
+
+	\caption{The number concentration of agglomerates and primary particles (a), and mobility and gyration diameters (b) obtained by Omnisoot using MPBM and SPBM in the free-molecular regime, which are in close agreement with the DEM results~\citep{kholghy2021surface} indicating the validation of the coagulation sub-models.}
 	\label{fig:coagvalid_Nd} 
 \end{figure}
 
@@ -59,36 +38,39 @@ MPBM model cannot resolve PSD because of the monodispersity assumption. In contr
 	\centering
 	\begin{subfigure}[t]{0.4\textwidth}
 		\begin{tikzpicture}
-			\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=1\textwidth]{Figures/Results/Validation/Coagulation/sigmag.pdf}};
-			\draw (0.54, -1.02) node {\scriptsize{\cite{kholghy2021surface}}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.4\textwidth}
-		\begin{tikzpicture}
 			\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=1\textwidth]{Figures/Results/Validation/Coagulation/PSD.pdf}};
 			\draw (1.3, -1.2) node {\scriptsize{\cite{goudeli2015coagulation}}};
 		\end{tikzpicture}
 	\end{subfigure}
-	\caption{The standard deviation of mobility diameter, $\mathrm{\sigma_g}$, obtained with SPBM in close agreement with DEM results~\citep{kholghy2021surface} (shown in the left pane) that reaches $\mathrm{\sigma_{g,fm}=2.03}$ characteristic of the free molecular regime~\citep{vemury1995self}; the particle size distribution normalized number concentration of agglomerates is plotted against non-dimensional volume (shown in the right pane) at different residence times that overlaps after initial transient phase marking the attainment of self-preserving size distribution in good agreement with DEM results~\citep{goudeli2015coagulation}}
-	\label{fig:coagvalid_sigmapsd} 
+	\begin{subfigure}[t]{0.4\textwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=1\textwidth]{Figures/Results/Validation/Coagulation/PSD_cont.pdf}};
+			\draw (1.3, -1.22) node {\scriptsize{\cite{kholghy2021surface}}};
+		\end{tikzpicture}
+	\end{subfigure}
+	\caption{The non-dimensional particle size distribution at different residence times in the free-molecular (a) and continuum regimes (b) overlaps after the initial transient phase, indicating the attainment of a self-preserving size distribution, which is also in good agreement with DEM results~\citep{goudeli2015coagulation}.}
+	\label{fig:coagvalid_psd} 
 \end{figure}
 
-A similar test\footnote{\href{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}} was performed in the continuum regime, and the results from the SPBM were compared with those obtained from DEM. The simulation conditions were the same as in the previous case (Table~\ref{tab:simcond_coagtest}), except for the temperature, $T = 600$ K, and the initial particle diameter, $d^1_p = 259$ nm. Figure~\ref{fig:coagvalid_contpsd} shows that the non-dimensional size distribution predicted by SPBM reaches the self-preserving state in good agreement with DEM results~\citep{goudeli2015coagulation}, which supports the validity of the coagulation sub-model in Omnisoot under continuum conditions.
+%A similar test\footnote{\href{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}{https://github.com/mohammadadib-cu/omnisoot-cv/tree/main/validations/coagulation/continuum}} was performed in the continuum regime, and the results from the SPBM were compared with those obtained from DEM. The simulation conditions were the same as in the previous case, except for the temperature, $\mathrm{T} = 600$ K, and the initial particle diameter, $d^1_p = 259$ nm. Figure~\ref{fig:coagvalid_contpsd} shows that the non-dimensional size distribution predicted by SPBM reaches the self-preserving state in good agreement with DEM results~\citep{goudeli2015coagulation}, which supports the validity of the coagulation sub-model in Omnisoot under continuum conditions.
 
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}
-		\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=0.4\textwidth]{Figures/Results/Validation/Coagulation/PSD_cont.pdf}};
-		\draw (1.3, -1.22) node {\scriptsize{\cite{kholghy2021surface}}};
-	\end{tikzpicture}
-	\caption{The particle size distribution normalized number concentration of agglomerates plotted against non-dimensional volume reaches self-preserving size distribution in good agreement with DEM results~\citep{goudeli2015coagulation}}
-	\label{fig:coagvalid_contpsd} 
+	\begin{subfigure}[t]{0.4\textwidth}
+		\begin{tikzpicture}
+				\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=1\textwidth]{Figures/Results/Validation/Coagulation/sigmag.pdf}};
+				\draw (0.54, -1.02) node {\scriptsize{\cite{kholghy2021surface}}};
+			\end{tikzpicture}
+	\end{subfigure}
+	\caption{Standard deviation of the mobility diameter, $\mathrm{\sigma_g}$, in the free-molecular regime obtained by SPBM is in close agreement with DEM results~\citep{kholghy2021surface}.}
+	\label{fig:coagvalid_sigma} 
 \end{figure}
 
-\subsection{Elemental and Energy Balance Assessment}
 
-\noindent To ensure the accuracy and reliability of the simulations, the conservation of elemental mass and energy was assessed across all reactor models implemented in {omnisoot}. Elemental balances of carbon and hydrogen, as well as the total energy (internal or enthalpy depending on the reactor type) of the gas-particle system, were evaluated during soot formation processes under various pyrolysis and combustion conditions.
-Simulations were performed using different combinations of PAH growth and particle dynamics models, and the relative errors in elemental and energy balances were monitored over time or reactor length. The residuals for all reactor configurations remained within acceptable limits (typically below $10^{-10}$), confirming that {omnisoot} accurately preserves mass and energy during the coupled evolution of gas-phase and particulate species. The relative error of total carbon, hydrogen and energy in CVR, CPR, PSR, and PFR using different combinations of particle dynamics and inception models is shown in Figures~\ref{fig:constuvvalid}-\ref{fig:pfrvalid}.
+\subsection{Elemental and Energy Balance}
+
+\noindent To ensure the accuracy and reliability of the simulations, the conservation of elemental mass and energy was assessed across all reactor models implemented in Omnisoot. Elemental balances of carbon and hydrogen, as well as the total energy (internal or enthalpy depending on the reactor type) of the gas-particle system, were evaluated during soot formation processes under various pyrolysis and combustion conditions.
+Simulations were performed using different combinations of PAH growth and particle dynamics models, and the relative errors in elemental and energy balances were monitored over time or reactor length. The residuals for all reactor configurations remained within acceptable limits (typically below $10^{-10}$), confirming that Omnisoot accurately preserves mass and energy during the coupled evolution of gas-phase and particulate species. The relative error of total carbon, hydrogen and energy in CVR, CPR, PSR, and PFR using different combinations of particle dynamics and inception models are shown in Figures~\ref{fig:constuvvalid}-\ref{fig:pfrvalid}.
  
  %Figure~\ref{fig:constuvvalid} demonstrates the relative error of total carbon, hydrogen and energy in a CVR simulation for the pyrolysis of 30\% $\mathrm{CH_4}$-$\mathrm{N_2}$ with the initial temperature and pressure of 2455 K and 3.47 atm. The relative errors are less than $10^{-11}$ for different combinations of PAH growth and particle dynamics models. The same evaluation was performed for CPR, PSR and PFR reactor and the corresponding residuals are shown in Figures~\ref{fig:cprvalid}-\ref{fig:pfrvalid}.
 

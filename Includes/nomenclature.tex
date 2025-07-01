@@ -2,13 +2,31 @@
 \nomenclature[a]{CFD}{Computational Fluid Dynamics}
 \nomenclature[a]{SPBM}{Sectional Population Balance Model}
 \nomenclature[a]{DEM}{Discrete Element Modelling}
-\nomenclature[a]{HACA}{Hydrogen abstraction carbon addition}
+\nomenclature[a]{HACA}{H-abstraction-$\mathrm{C_2H_2}$/Carbon-addition}
 
 \nomenclature[c]{$k_B$}{Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}}
 \nomenclature[c]{$Av$}{Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}}
+\nomenclature[c]{$R$}{Global gas constant\nomunit{8.314 \si{\joule\per\mol\per\kelvin}}}
 
-\nomenclature[e]{$h$}{Entalpy\nomunit{\si{J\per\kg}}}
-\nomenclature[e]{$u$}{Internal energy\nomunit{\si{J\per\kg}}}
+\nomenclature[e]{$h$}{Enthalpy\nomunit{\si{J\per\kg}}}
+\nomenclature[e]{$e$}{Internal energy\nomunit{\si{J\per\kg}}}
+
+\nomenclature[e]{$c_p$}{Heat capacity at constant pressure\nomunit{\si{\joule\per\kg\per\kelvin}}}
+\nomenclature[e]{$c_v$}{Heat capacity at constant volume\nomunit{\si{\joule\per\kg\per\kelvin}}}
+\nomenclature[e]{$c_{soot}$}{Heat capacity of soot\nomunit{\si{\joule\per\kg\per\kelvin}}}
+
+
+\nomenclature[e]{$u$}{Velocity\nomunit{\si{\meter\per\second}}}
+
+\nomenclature[e]{$V$}{Volume\nomunit{\si{\meter\cubed}}}
+
+\nomenclature[e]{$p$}{Pressure\nomunit{\si{\pascal}}}
+
+\nomenclature[e]{$P_c$}{Wetted perimeter of the flow reactor\nomunit{\si{\meter}}}
+
+\nomenclature[e]{$A$}{Surface area\nomunit{\si{\meter\squared}}}
+
+\nomenclature[e]{$k_{dep}$}{Deposition velocity\nomunit{\si{\meter\per\second}}}
 
 \nomenclature[e]{$N_{agg}$}{Number density of agglomerates\nomunit{\si{mol\per\kg}}}
 \nomenclature[e]{$N_{pri}$}{Number density of primary particles\nomunit{\si{mol\per\kg}}}
@@ -22,35 +40,45 @@
 \nomenclature[e]{$d$}{Diameter\nomunit{m}}
 \nomenclature[e]{$m$}{Mass\nomunit{\si{\kilogram}}}
 \nomenclature[e]{$W$}{Molecular weight\nomunit{kg/mol}}
-\nomenclature[e]{$n_p$}{Number of primary particles of per agglomerate}
+\nomenclature[e]{$n_p$}{Number of primary particles of per agglomerate\nomunit{\si{-}}}
 \nomenclature[e]{$d_p$}{Primary particle diameter \nomunit{\si{\metre}}}
 \nomenclature[e]{$d_m$}{Mobility diameter \nomunit{\si{\metre}}}
 \nomenclature[e]{$d_g$}{Gyration diameter \nomunit{\si{\metre}}}
 \nomenclature[e]{$d_c$}{Collision diameter \nomunit{\si{\metre}}}
-\nomenclature[e]{$k$}{Reaction rate constant \nomunit{\si{\meter\cubed\per\mol\per\second}}}
+\nomenclature[e]{$k$}{Reaction rate constant \nomunit{\si{\meter\cubed\second\per\mol}}}
 \nomenclature[e]{$D$}{Diffusion coefficient of particles \nomunit{\si{\meter\squared\per\second}}}
 \nomenclature[e]{$SF$}{Sectional spacing factor \nomunit{\si{-}}}
 %\nomenclature[g]{$\beta$}{Collision frequency\nomunit{\metre}}
 \nomenclature[e]{$f$}{Friction factor \nomunit{\si{-}}}
 \nomenclature[e]{$R_H$}{Duct hydraulic radius \nomunit{\si{-}}}
 \nomenclature[e]{$D_H$}{Duct hydraulic diameter \nomunit{\si{-}}}
-\nomenclature[e]{$Kn$}{Knudsen number \nomunit{\si{-}}}
+\nomenclature[e]{$Kn$}{Knudsen number \nomunit{\si{\meter}}}
+\nomenclature[e]{$f_v$}{Soot volume fraction based on gas volume\nomunit{\si{\metre\cubed\per\metre\cubed}}}
+\nomenclature[e]{$Y$}{Mass fraction of gaseous species\nomunit{\si{-}}}
+\nomenclature[e]{$Re$}{Reynolds number\nomunit{\si{-}}}
+\nomenclature[e]{$Sc$}{Schmidt number\nomunit{\si{-}}}
+\nomenclature[e]{$Sh$}{Sherwood number\nomunit{\si{-}}}
+
+
 
 \nomenclature[g]{$\rho$}{Density\nomunit{\si{\kg\per\metre^3}}}
-\nomenclature[g]{$\varphi$}{Soot volume fraction based on reactor volume\nomunit{\si{\kg\per\metre^3}}}
-\nomenclature[g]{$f_v$}{Soot volume fraction based on gas volume\nomunit{\si{\metre\cubed\per\metre\cubed}}}
+\nomenclature[g]{$\varphi$}{Soot volume fraction based on reactor volume\nomunit{\si{\metre\cubed\per\metre\cubed
+}}}
+
 %\nomenclature[g]{$\rho_{soot}$}{Soot density\nomunit{\si{\kg\per\metre^3}}}
 \nomenclature[g]{$\nu$}{Gas kinematic viscosity\nomunit{\si{\metre^2\per\second}}}
 \nomenclature[g]{$\beta$}{Collision frequency\nomunit{\si{\metre^3\per\second}}}
 \nomenclature[g]{$\lambda$}{Mean free path\nomunit{\si{\metre}}}
 \nomenclature[g]{$\lambda_a$}{Mean stopping distance of particles\nomunit{\si{\metre}}}
 \nomenclature[g]{$\delta_a$}{Mean distance of particles\nomunit{\si{\metre}}}
-%\nomenclature[g]{$\omega$}{The rate of production/consumption of species \nomunit{\si{mol/$\mathrm{m^3}-s$}}}
+\nomenclature[g]{$\omega$}{The rate of production of gaseous species\nomunit{\si{\mol\per\metre\cubed\second}}}
+\nomenclature[g]{$\tau_w$}{Wall shear stress\nomunit{\si{\pascal}}}
+\nomenclature[g]{$\tau_{psr}$}{Nominal residence time of perfectly stirred reactor\nomunit{\si{\second}}}
+\nomenclature[g]{$\epsilon$}{Wall roughness\nomunit{\si{\meter}}}
+
 
 \nomenclature[u]{agg}{Agglomerate}
 \nomenclature[u]{pri}{Primary particle}
-\nomenclature[u]{m}{Mobility}
-\nomenclature[u]{g}{Gyration}
 \nomenclature[u]{fm}{Free molecular}
 \nomenclature[u]{cont}{Continuum}
 \nomenclature[u]{inc}{Inception}
