@@ -1,4 +1,4 @@
-\begin{thebibliography}{123}
+\begin{thebibliography}{124}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -622,6 +622,12 @@ Jin~Jwang Wu and Richard~C Flagan.
 \newblock A discrete-sectional solution to the aerosol dynamic equation.
 \newblock \emph{Journal of Colloid and interface Science}, 123\penalty0
   (2):\penalty0 339--352, 1988.
+
+\bibitem[Zhang(2010)]{zhang2010detailed}
+Qingan Zhang.
+\newblock \emph{Detailed modeling of soot formation/oxidation in laminar coflow
+  diffusion flames}.
+\newblock PhD thesis, 2010.
 
 \bibitem[Veshkini(2015)]{veshkini2015understanding}
 Armin Veshkini.

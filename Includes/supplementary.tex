@@ -14,7 +14,7 @@
 \beginsupplement
 
 
-\section{The Effect of Formation and Sensible Energy of Soot}
+\section{The Effect of formation and sensible energy of soot}
 
 \begin{figure}[H]
 	\centering
@@ -24,11 +24,12 @@
 	\begin{subfigure}[t]{0.4\textwidth}
 		\includegraphics[width=1\textwidth]{Figures/Theory/sse_gasresid.pdf}
 	\end{subfigure}
-	\caption{The comparison of temperature and soot mobility diameter, $d_m$ (a) and the mole fraction of methane, $\mathrm{CH_4}$, and benzene, A1 in the simulation of the pyrolysis of 30\%$\mathrm{CH_4}$-Ar when soot sensible energy is considered (labeled as ``WSSE") and neglected (labeled as ``W/OSSE"). The CVR was used along with Caltech mechanism~\citep{blanquart2009chemical}, Reactive Dimerization and MPBM}
+	\caption{The comparison of temperature and soot mobility diameter, $d_m$ (a) and the mole fraction of methane, $\mathrm{CH_4}$, and benzene, A1, in the simulation of the pyrolysis of 30\%~$\mathrm{CH_4}$-Ar when soot sensible energy is considered (labeled as ``WSSE") and neglected (labeled as ``W/OSSE"). The CVR was used along with Caltech mechanism~\citep{blanquart2009chemical}, Reactive Dimerization and MPBM.}
 	\label{fig:sseeffect}
 \end{figure}
 
 \section{Diffusion of soot particles}
+\label{sec:diffcoef}
 % [Might be removed to the supplumenatary material for the paper]
 The diffusion coefficient of soot particle, $D^i$, is calculated as:
 
@@ -43,7 +44,7 @@ The diffusion coefficient of soot particle, $D^i$, is calculated as:
 	\label{eqn:fraction}
 \end{equation}
 
-\noindent where ${C^i}$ is the Cunningham correction factor for the particle friction factor that accounts for non-continuum effects in the transition and free molecular regimes. ${C^i}$ is calculated for a given diameter, $d$, as: 
+\noindent where ${C^i}$ is the Cunningham correction factor that accounts for non-continuum effects in the transition and free-molecular regimes. ${C^i}$ is calculated for a given diameter, $d$, as: 
 \begin{equation}
 	C^i(d) = 1+\frac{2\lambda}{d}
 	\left(
@@ -53,7 +54,7 @@ The diffusion coefficient of soot particle, $D^i$, is calculated as:
 \end{equation}
 \noindent  where $\lambda$ is the mean free path of gas given as:
 \begin{equation}
-	\lambda = \frac{\mu}{\rho}\sqrt{\frac{\pi W_{gas}}{2k_B Av T}}
+	\lambda = \frac{\mu}{\rho}\sqrt{\frac{\pi \cdot W_{gas}}{2k_B \cdot Av \cdot T}}
 	\label{eqn:lambda}.
 \end{equation}
 Note that $\lambda$ is a property of the gas mixture that does not depend on particle mass and morphology. 
@@ -75,7 +76,7 @@ Coagulation redistributes the total number of agglomerates and primary particles
 	\eta_{ijk}\zeta^{jk}\beta^{jk}N^j_{agg}N^k_{agg}
 	-
 	N^i_{agg}
-	\sum_{k=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg},
+	\sum_{m=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg},
 	\label{eqn:IcoagNaggsect}
 \end{equation}
 
@@ -89,7 +90,7 @@ Coagulation redistributes the total number of agglomerates and primary particles
 	\eta_{p,ijk}\eta_{ijk}\zeta^{jk}\beta^{jk}N^j_{agg}N^k_{agg}
 	-
 	N^i_{pri}
-	\sum_{k=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg},
+	\sum_{m=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg},
 	\label{eqn:IcoagNprisect}
 \end{equation}
 
@@ -103,7 +104,7 @@ Coagulation redistributes the total number of agglomerates and primary particles
 	\eta_{h,ijk}\eta_{ijk}\zeta^{jk}\beta^{jk}N^j_{agg}N^k_{agg}
 	-
 	H^i_{tot}
-	\sum_{k=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg}.
+	\sum_{m=1}^{n_{sec}}\zeta^{im}\beta^{im}N^m_{agg}.
 	\label{eqn:IcoagHtotsect}
 \end{equation}
 \noindent where ${\delta_{jk}}$ is the Kronecker delta defined as:
@@ -122,7 +123,7 @@ Coagulation redistributes the total number of agglomerates and primary particles
 The collision frequency between sections $j$ and $k$ ($\beta^{jk}$) can be obtained from the harmonic mean of the values in the continuum ($\beta_{cont}^{jk}$) and free molecular ($\beta_{fm}^{jk}$) regimes as:
 
 \begin{equation}
-	\beta^{jk} = 				       \frac{\beta^{jk}_{fm}\beta^{jk}_{cont}}{\beta^{jk}_{fm}
+	\beta^{jk} = 				       \frac{\beta^{jk}_{fm}\cdot\beta^{jk}_{cont}}{\beta^{jk}_{fm}
 		+\beta^{jk}_{cont}}
 	\label{eqn:betahmsect},
 \end{equation}
@@ -218,15 +219,15 @@ In Equation~\eqref{eqn:IcoagNaggsect}, $\mathrm{\eta_{ijk}}$ assigns newly forme
 	\eta_{ijk}=
 	\left\{
 	\begin{aligned}
-		&\frac{C^{i+1}_{agg}-C^{jk}_{agg}}{C^{i+1}_{agg}+C^i_{agg}},
+		&\frac{C^{i+1}_{agg}-C^{jk}_{agg}}{C^{i+1}_{agg}-C^i_{agg}},
 		&&
 		\text{if } C^i_{agg} \le C^{jk}_{agg} < C^{i+1}_{agg}
 		\\
-		&\frac{C^{i}_{agg}-C^{jk}_{agg}}{C^{i}_{agg}+C^{i-1}_{agg}}, 
+		&\frac{C^{i}_{agg}-C^{jk}_{agg}}{C^{i}_{agg}-C^{i-1}_{agg}}, 
 		&&
 		\text{if } C^{i-1}_{agg} \le C^{jk}_{agg} < C^{i}_{agg}
 		\\
-		&0
+		&0,
 		&&\text{else}
 	\end{aligned}
 	\right.
@@ -239,8 +240,8 @@ In Equation~\eqref{eqn:IcoagNaggsect}, $\mathrm{\eta_{ijk}}$ assigns newly forme
 	\frac{C^i_{agg}}{C^{jk}_{agg}}
 	\left(
 	n^j_p + n^k_p
-	\right)
-	\label{eqn:etapcoag},
+	\right),
+	\label{eqn:etapcoag}
 \end{equation}
 
 \begin{equation}
@@ -248,12 +249,13 @@ In Equation~\eqref{eqn:IcoagNaggsect}, $\mathrm{\eta_{ijk}}$ assigns newly forme
 	\frac{C^i_{agg}}{C^{jk}_{agg}}
 	\left(
 	H^j_{agg} + H^k_{agg}
-	\right)
-	\label{eqn:etahcoag},
+	\right).
+	\label{eqn:etahcoag}
 \end{equation}
 
 
-In Equation~\eqref{eqn:IcoagNaggsect}, $\zeta^{jk}$ is the coagulation efficiency of soot particles in sections $j$ and $k$. $\zeta^{jk}=1$ means that every collision between two soot particles successfully results in formation of a new agglomerate. However, numerical models~\citep{narsimhan1985brownian} and experimental evidence~\citep{d2005surface} showed that the coagulation efficiency drastically decrease for particles smaller than 10 nm in the free molecular regime (Kn$>>$10) due to their high kinetic energy that exceeds the attractive forces~\citep{wang1991filtration}. The coagulation efficiency of two colliding particles can be described as \cite{narsimhan1985brownian}:
+In Equation~\eqref{eqn:IcoagNaggsect}, $\zeta^{jk}$ is the coagulation efficiency of soot particles in sections $j$ and $k$. A value of $\zeta^{jk} = 1$ indicates that every collision between two soot particles successfully results in the formation of a new agglomerate. However, numerical models~\citep{narsimhan1985brownian} and experimental evidence~\citep{d2005surface} have shown that coagulation efficiency drastically decreases for particles smaller than 10~nm in the free-molecular regime ($\mathrm{Kn}\gg10$), due to their high kinetic energy exceeding the magnitude of attractive forces~\citep{wang1991filtration}. The coagulation efficiency between two colliding particles can be described by~\citep{narsimhan1985brownian}:
+
 
 \begin{equation}
 	\zeta^{ij} = 1 - 
@@ -265,16 +267,16 @@ In Equation~\eqref{eqn:IcoagNaggsect}, $\zeta^{jk}$ is the coagulation efficienc
 \noindent where $\Phi_0$ is the potential well depth, i.e., the minimum interaction energy between two colliding particles. \citet{hou2020coagulation} calculated $\Phi_0$ for soot particles ranging from 1 to 15 nm by considering the attractive and repulsive interactions between constituent carbon and hydrogen atoms, and proposed an equation based on the reduced diameter, $d^{jk}_r$, of colliding particles as:
 
 \begin{equation}
-	\Phi^{ij}_0 = -6.6891\times10^{-23} (d^{jk}_r)^3 + 1.244\times10^{-21} (d^{jk}_r)^2 + 1.1394\times10^{-20} d^{jk}_r - 5.5373\times10^{-21}
+	\Phi^{ij}_0 = -6.6891\times10^{-23} (d^{jk}_r)^3 + 1.1244\times10^{-21} (d^{jk}_r)^2 + 1.1394\times10^{-20} d^{jk}_r - 5.5373\times10^{-21},
 	\label{eqn:coageffphi}
 \end{equation}
 
 \begin{equation}
-	d^{jk}_r = \frac{d^i_c\cdot d^j_c}{d^i_c+d^j_c}
+	d^{jk}_r = \frac{d^i_c\cdot d^j_c}{d^i_c+d^j_c}.
 	\label{eqn:coageffredcueddia}
 \end{equation}
 
-Equation~\eqref{eqn:coageffphi} is valid for $d^{jk}_r$ between 1 and 7 nm, and $\zeta^{ij}$ is assumed as unity for particles with reduced diameter larger than 7 nm.
+Equation~\eqref{eqn:coageffphi} is valid for $d^{jk}_r$ between 1 and 7~nm, and $\zeta^{ij}$ is assumed as unity for particles with a reduced diameter larger than 7~nm.
 
 
 \subsection{Other Source terms}
@@ -305,24 +307,24 @@ Inception introduces equal number of agglomerates and primary particles to the f
 	\end{aligned}
 	\label{eqn:S_Htot_incsect}
 \end{equation}
+Surface growth and PAH adsorption increase both the carbon mass and hydrogen content of agglomerates, transferring them to higher sections. The rate at which agglomerates are removed from the original section and added to the target section is calculated to ensure mass conservation. Specifically, it is determined by dividing the mass growth rate by the difference in mass between adjacent sections as:
 
-Surface growth and PAH adsorption increase the carbon mass and hydrogen content of agglomerates, and transfer them to upper sections. The removal rate of agglomerates from the original section due to surface growth and PAH adsorption must be equal to the addition rate of agglomerates to the target section to conserve the mass, and it is calculated by dividing the mass growth rate by the difference of the mass of the adjacent sections.
 
 \begin{equation}
 	\left(S^i_{N_{agg}}\right)_{haca, ads}=
 	\frac{1}{Av}
 	\left\{
 	\begin{aligned}
-		&-\frac{I^i_{C_{tot},haca}+I^i_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}
+		&-\frac{I^i_{C_{tot},haca}+I^i_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},haca}}{C^{i}_{agg}-C^{i-1}_{agg}}
-		-\frac{I^{i}_{C_{tot},haca}+I^{i}_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}
+		-\frac{I^{i}_{C_{tot},haca}+I^{i}_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}},
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
-		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}
+		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}.
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -336,16 +338,16 @@ As agglomerates move up/down through sections, they carry the number of primary 
 	\frac{1}{Av}
 	\left\{
 	\begin{aligned}
-		&-\frac{I^i_{C_{tot},gr}+I^i_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}
+		&-\frac{I^i_{C_{tot},haca}+I^i_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i-1}_p
-		-\frac{I^{i}_{C_{tot},haca}+I^{i}_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}n^{i}_p
+		-\frac{I^{i}_{C_{tot},haca}+I^{i}_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}n^{i}_p,
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
-		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i-1}_p
+		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i-1}_p,
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -358,18 +360,18 @@ As agglomerates move up/down through sections, they carry the number of primary 
 	\left\{
 	\begin{aligned}
 		&-\frac{I^i_{C_{tot},haca}+I^i_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}H^{i}_{agg} 
-		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads}
+		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}H^{i-1}_{agg}
 		-\frac{I^{i}_{C_{tot},haca}+I^{i}_{C_{tot},ads}}{C^{i+1}_{agg}-C^{i}_{agg}}H^{i}_{agg}
-		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads}
+		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads},
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
 		&\frac{I^{i-1}_{C_{tot},haca}+I^{i-1}_{C_{tot},ads}}{C^{i}_{agg}-C^{i-1}_{agg}}H^{i-1}_{agg}
-		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads}
+		+ I^{i}_{H_{tot}, haca} + I^{i}_{H_{tot}, ads}.
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -385,19 +387,19 @@ Similarly, the agglomerates lose carbon mass by oxidation, and descend to the lo
 	\begin{aligned}
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}}
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}},
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
 		&
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}},
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -411,19 +413,19 @@ Similarly, the agglomerates lose carbon mass by oxidation, and descend to the lo
 	\begin{aligned}
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}n^{i+1}_p
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}}
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}n^{i+1}_p
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i}_p
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i}_p,
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
 		&
 		-
-		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i}_p
+		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}n^{i}_p,
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -438,21 +440,21 @@ Similarly, the agglomerates lose carbon mass by oxidation, and descend to the lo
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}H^{i+1}_{agg}
 		-
 		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}}H^{i}_{agg}
-		+ I^{i}_{H_{tot}, ox}
+		+ I^{i}_{H_{tot}, ox},
 		&&
 		\text{if } i = 1
 		\\
 		&\frac{I^{i+1}_{C_{tot},ox}}{C^{i+1}_{agg}-C^{i}_{agg}}H^{i+1}_{agg}
 		-
 		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}H^{i}_{agg}
-		+ I^{i}_{H_{tot}, ox}
+		+ I^{i}_{H_{tot}, ox},
 		&&
 		\text{if } 1 < i < n_{sec}
 		\\
 		&
 		-
 		\frac{I^{i}_{C_{tot},ox}}{C^{i}_{agg}-C^{i-1}_{agg}}H^{i}_{agg}
-		+ I^{i}_{H_{tot}, ox}
+		+ I^{i}_{H_{tot}, ox}.
 		&&\text{if } i=n_{sec}
 	\end{aligned}
 	\right.
@@ -466,20 +468,20 @@ Similarly, the agglomerates lose carbon mass by oxidation, and descend to the lo
 \subsection{Irreversible Dimerization}
 \label{sec:irrevdim}
 
-The Irreversible Dimerization is based on the collision of a pair of PAHs molecules forming a dimer. The sequential growth continues leading formation of trimers, and tetramers until the PAH cluster mass reaches a threshold that can be considered a solid particle. For practical purposes, dimer is usually considered as an incipient particle that grows by surface growth and coagulation. A single-step collision of two similar PAHs forms a new dimer as:
+The Irreversible Dimerization is based on the collision of a pair of PAH molecules forming a dimer. The sequential growth continues leading formation of trimers and tetramers until the PAH cluster mass reaches a threshold that can be considered a solid particle. For practical purposes, a dimer is usually considered as an incipient particle that grows by surface growth and coagulation. A single-step collision of two similar PAHs forms a new dimer as:
 
 \reaction[react:irrevdiminc]{
 	$\mathrm{PAH}_j$ + $\mathrm{PAH}_j$ ->[$k_{f,dim_j}$] $\mathrm{Dimer}_j$
 }
 Similarly, the adsorption of each PAH molecule on soot particles is described by the irreversible collision of soot and $\mathrm{PAH}_j$ as:
 \reaction[react:irrevdimads]{
-	$\mathrm{PAH_j}$ + Soot ->[k_{f,ads_j}] $\mathrm{Soot-PAH_j}$
+	$\mathrm{PAH}_j$ + Soot ->[$k_{f,ads_j}$] Soot-$\mathrm{PAH}_j$
 }
-The forward rate of dimerization, ${k_{f,dim_j}}$ and adsorption, $k_{f,ads_j}$ in Reactions~\eqref{react:irrevdiminc} and \eqref{react:irrevdimads} are calculated as:
+The forward rate of dimerization, ${k_{f,dim_j}}$, and adsorption, $k_{f,ads_j}$, in Reactions~\eqref{react:irrevdiminc} and \eqref{react:irrevdimads} are calculated as:
 
 \begin{equation}
 	k_{f,dim_j}=
-	\gamma_{inc}\cdot\beta_{jk,PAH}\cdot Av
+	\gamma_{inc}\cdot\beta_{jj,PAH}\cdot Av
 	\label{eqn:kfdim},
 \end{equation}
 
@@ -489,20 +491,21 @@ The forward rate of dimerization, ${k_{f,dim_j}}$ and adsorption, $k_{f,ads_j}$ 
 	\label{eqn:kfads},
 \end{equation}
 
-\noindent where $\beta_{jk,PAH}$ and $\beta^i_{j,ads}$ are computed using Equations~\eqref{eqn:betadim} and \eqref{eqn:betahmads}, respectively, and ${\gamma_{inc}}$ and ${\gamma_{ads}}$ are the collision efficiencies for dimerization and adsorption, respectively. Their value vary in the range of [$\mathrm{10^{-7}}$, 1], and are usually chosen to match the predicted soot mass with the experimental data. The rate of dimerization of $\mathrm{PAH_j}$ are calculated accordingly as:
+\noindent where $\beta_{jk,\mathrm{PAH}}$ and $\beta^i_{j,\mathrm{ads}}$ are computed using Equations~\eqref{eqn:betadim} and~\eqref{eqn:betahmads}, respectively, and $\gamma_{\mathrm{inc}}$ and $\gamma_{\mathrm{ads}}$ are the collision efficiencies for dimerization and adsorption, respectively. Their values range from $\mathrm{10^{-7}}$ to 1 and are typically chosen to match the predicted soot properties with experimental data. The dimerization rate of $\mathrm{PAH}_j$ is then calculated as:
+
 \begin{equation}
-	w_{dim_j} = \eta_{inc} k_{f,dim_{jj}} [\mathrm{PAH_j}] [\mathrm{PAH_j}],
+	w_{dim_j} = \eta_{inc} k_{f,dim_{j}} [\mathrm{PAH}_j] [\mathrm{PAH}_j].
 	\label{eqn:irrevdim_wdim}
 \end{equation}
 
-The partial source terms for inception are calculated as:
+The partial source terms of inception are calculated as:
 
 \begin{equation}
 	I_{N,inc} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,C},
 	\label{eqn:INinc}
 \end{equation}
 \begin{equation}
-	I_{C_{tot},inc} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,C},
+	I_{C_{tot},inc} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,C}.
 	\label{eqn:ICtotinc}
 \end{equation}
 \begin{equation}
@@ -511,39 +514,48 @@ The partial source terms for inception are calculated as:
 \end{equation}
 The rate of PAH adsorption for each section is obtained as:
 \begin{equation}
-	w^i_{ads_j} = \eta_{ads} k^i_{f,ads_{j}} [\mathrm{soot}] [\mathrm{PAH_j}],
+	w^i_{ads_j} = \eta_{ads} k^i_{f,ads_{j}} [\mathrm{soot}^i] [\mathrm{PAH}_j].
 	\label{eqn:adsrate_irrevdim}
 \end{equation}
 
 The contribution of PAH adsorption to the source terms are expressed as:
 
 \begin{equation}
-	I^i_{C_{tot},ads} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH}} w^i_{ads_j} n_{PAH,C}
+	I^i_{C_{tot},ads} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH_j}} w^i_{ads_j} n_{PAH_j,C},
 	\label{eqn:ICtotads}
 \end{equation}
 \begin{equation}
-	I^i_{H_{tot},ads} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} w^i_{dim_j} (n_{PAH,H}-2)
+	I^i_{H_{tot},ads} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH_j}} w^i_{ads_j} (n_{PAH_j,H}-2).
 	\label{eqn:IHtotads}
 \end{equation}
 
-Note that PAH adoption is a mass growth phenomenon that only changes the carbon ($C_{tot}$) and hydrogen ($H_{tot}$) content of soot but does not affect number of agglomerates ($N_{agg}$) and primary particles ($N_{pri}$). Each PAH molecule loses one H atom becoming a radical that forms bonds with a dehydrogenated site on soot surface, so two H atoms are released during adsorption that is taken into account in Equation~\eqref{eqn:IHtotads}.
+Note that PAH adsorption is a mass growth phenomenon that only changes $C_{tot}$ and $H_{tot}$ but does not affect number of $N_{agg}$ and $N_{pri}$. Each PAH molecule loses one H atom becoming a radical that forms bonds with a dehydrogenated site on soot surface, so two H atoms are released during adsorption that is taken into account in Equation~\eqref{eqn:IHtotads}.
 
-The formation of a dimer consumes two PAH molecules, and during adsorption one PAH molecule is removed from the gas mixture, so the total rate of removal of $\mathrm{PAH_j}$ by the irreversible dimerization is obtained as:
+The formation of a dimer consumes two PAH molecules, and during adsorption one PAH molecule is removed from the gas mixture, so the total rate of removal of $\mathrm{PAH}_j$ by Irreversible Dimerization is obtained as:
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
 	\right)_{inc}
 	= 
-	-2w_{dim_j}-\sum_{i=1}^{n_{sec}}w^i_{ads_j}
-	\label{eqn:PAHscrub_irrevdim}.
+	-2w_{dim_j},
+	\label{eqn:PAHscrub_irrevdim_inc}
+\end{equation}
+
+\begin{equation}
+	\left(
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\right)_{inc}
+	= 
+	-\sum_{i=1}^{n_{sec}}w^i_{ads_j}.
+	\label{eqn:PAHscrub_irrevdim_ads}
 \end{equation}
 
 Moreover, one $\mathrm{H_2}$ is released to the gas mixture as a result of the adsorption process.
 \begin{equation}
 	\left(
 	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
-	\right)_{inc}
+	\right)_{ads}
 	= 
 	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
 	\label{eqn:H2scrub_irrevdim}.
@@ -553,14 +565,14 @@ Moreover, one $\mathrm{H_2}$ is released to the gas mixture as a result of the a
 \subsection{Reactive Dimerization}
 \label{sec:reacvdim}
 
-This model is built on Irreversible Dimerization with two main differences: The first step of dimerization and adsorption is reversible forming physically bonded dimers followed by a irreversible carbonization that leads to chemical bond formation in dimers \citep{kholghy2018reactive}. This approach allows formation of homo- and heterodimers. The dimerization of $\mathrm{PAH_j}$ and $\mathrm{PAH_k}$ is described as:
+This model was built on Irreversible Dimerization with a main difference: The first step of dimerization and adsorption is reversible forming physically bonded dimers followed by a irreversible carbonization that leads to chemical bond formation in dimers \citep{kholghy2018reactive}. This approach allows the formation of homo- and hetero-dimers. The dimerization of $\mathrm{PAH}_j$ and $\mathrm{PAH}_k$ is described as:
 \reaction[reac:phydim_reacdim]{
 	PAH_j + PAH_k <-->[$k_{f,dim_{jk}}$][$k_{r,dim_{jk}}$] Dimer^*_{$ij$}
 }
 \reaction[reac:chemdim_reacdim]{
 	Dimer^*_{$jk$} ->[$k_{reac}$] Dimer_{$jk$}
 }
-\noindent where $\mathrm{Dimer^*}_{jk}$ and $\mathrm{Dimer}_{jk}$ physically and chemically bonded dimers, respectively, from $\mathrm{PAH}_j$ and $\mathrm{PAH}_k$. The forward rate of physical dimerization, ${k_{f,dim_{jk}}}$ is calculated as:
+\noindent where $\mathrm{Dimer^*}_{jk}$ and $\mathrm{Dimer}_{jk}$ are physically and chemically bonded dimers, respectively, from $\mathrm{PAH}_j$ and $\mathrm{PAH}_k$. The forward rate of physical dimerization, ${k_{f,dim_{jk}}}$, is calculated as:
 
 \begin{equation}
 	k_{f,dim_{jk}}=
@@ -568,7 +580,8 @@ This model is built on Irreversible Dimerization with two main differences: The 
 	\label{eqn:kfphydim_reacdim},
 \end{equation}
 
-\noindent where $\beta_{jk,PAH}$ is calculated using Equation~\eqref{eqn:betadim}, and ${p^{''}}=0.1$ accounts for the probability of PAH-PAH collisions in “FACE” configuration that results in successful vdW bond formation~\citep{miller1984intermolecular}. The reverse rate of physical dimerization, ${k_{r,dim_{jk}}}$ is obtained from the dimerization equilibrium constant~\citep{miller1991kinetics} as:
+\noindent where $\beta_{jk,\mathrm{PAH}}$ is calculated using Equation~\eqref{eqn:betadim}, and $p^{\prime\prime} = 0.1$ accounts for the probability of PAH–PAH collisions occurring in the "FACE" configuration that result in successful van der Waals (vdW) bond formation~\citep{miller1984intermolecular}. The reverse rate of physical dimerization, $k_{r,\mathrm{dim}_{jk}}$, is obtained from the dimerization equilibrium constant~\citep{miller1991kinetics} as:
+
 
 \begin{equation}
 	k_{r,dim_{jk}} = \frac{k_{f,dim_{jk}}}{K_{eq}} 
@@ -592,21 +605,22 @@ This model is built on Irreversible Dimerization with two main differences: The 
 \end{equation}
 \noindent where $a=0.115$ (obtained from pyrere dimerization data~\citep{sabbah2010exploring}) and $b=1.8$~\citep{kholghy2018reactive}, $c=933420$~J/kg, and $d=34053$~J/mol~\cite{kholghy2018reactive}. 
 
-The rate of chemical bond formation, $\mathrm{k_{reac}}$ is defined in the Arrhenius form~\cite{naseri2022simulating} as
+The rate constant of chemical bond formation, $k_{reac}$, is defined in the Arrhenius form~\cite{naseri2022simulating} as
 \begin{equation}
 	k_{reac} = 5\times10^6\cdot e^{(-96232/RT)}
 	\label{eqn:kc_reacdim}.
 \end{equation}
 
-Assuming a steady state condition for the physical dimers, $\mathrm{\partial [Dimer^*_{jk}]/\partial t=0}$, the rate of formation of chemically-bonded dimers can be obtained as
+Assuming a steady state condition for physical dimers, i.e., $\mathrm{\partial [Dimer^*_{jk}]/\partial t=0}$, the rate of formation of chemically-bonded dimers can be obtained as:
 
 \begin{equation}
-	\omega_{dim_{jk}} = k_{reac}\frac{k_{f,dim_{jk}}[\mathrm{PAH_j}][\mathrm{PAH_k}]}
+	\omega_{dim_{jk}} = k_{reac}\frac{k_{f,dim_{jk}}[\mathrm{PAH}_j][\mathrm{PAH}_k]}
 	{k_{r,dim_{jk}}+k_{reac}}
 	\label{eqn:chemdimer_reacdim}.
 \end{equation}
 
-The contribution of dimer formation to partial source terms is expressed by looping over all combinations of precursors as:
+The contribution of dimer formation to the partial source terms is evaluated by looping over all combinations of PAH precursors as:
+
 
 \begin{equation}
 	I_{N,{inc}} = 
@@ -638,7 +652,7 @@ The contribution of dimer formation to partial source terms is expressed by loop
 	\label{eqn:IHtot_inc}
 \end{equation}
 
-Similarly, PAH adsorption is described by a two-step process where the collision of $\mathrm{PAH_j}$ with soot agglomerates leads to physically bonded $\mathrm{Soot-PAH^*}$ that is carbonized and forms chemically bonded $\mathrm{Soot-PAH}$ on soot surface.
+Similarly, PAH adsorption is described by a two-step process where the collision of $\mathrm{PAH}_j$ with soot agglomerates leads to a physically bonded Soot$-$$\mathrm{PAH}^*_j$ that is carbonized and forms a chemically bonded Soot$-$$\mathrm{PAH}_j$ on soot surface.
 
 \reaction[reac:physootPAH_reacdim]{
 	PAH_j + Soot <-->[$k_{f,ads_j}$][$k_{r,ads_j}$] Soot-PAH^*_j
@@ -651,42 +665,42 @@ Similarly, PAH adsorption is described by a two-step process where the collision
 The forward and reverse rate of PAH-soot collision are calculated as:
 
 \begin{equation}
-	k^i_{f,ads}=\beta^i_{jk,ads}\cdot Av,
+	k^i_{f,ads_j}=\beta^i_{j,ads}\cdot Av,
 	\label{eqn:kfads_reacdim}
 \end{equation}
 
 \begin{equation}
-	k^i_{r,ads}=k^i_{f,ads}\cdot10^{-b}e^{-a\epsilon_{soot,j} \mathrm{ln}(10)/(RT)},
+	k^i_{r,ads_j}=k^i_{f,ads_j}\cdot10^{-b}e^{-a\epsilon^i_{soot,j} \mathrm{ln}(10)/(RT)},
 	\label{eqn:krads_reacdim}
 \end{equation}
 
 \begin{equation}
-	\epsilon_{soot,j} = cW_{soot,j} - d,
+	\epsilon^i_{soot,j} = cW^i_{soot,j} - d,
 	\label{eqn:epsilonads_reacdim}
 \end{equation}
 
-\noindent where $\beta^i_{jk,ads}$ is calculated using Equation~\eqref{eqn:betahmads}. The values of a, b, c, and d are the same as those explained in the inception part. Computing ${\epsilon_{soot,j}}$ also requires equivalent soot molecular weight, ${W_{soot}}$ for section i, which is estimated from carbon mass of each agglomerate as:
+\noindent where $\beta^i_{j,ads}$ is calculated using Equation~\eqref{eqn:betahmads}. The values of $a$, $b$, $c$, and $d$ are the same as those explained in the inception part. Computing ${\epsilon^i_{soot,j}}$ also requires the equivalent soot molecular weight, ${W^i_{soot}}$, which is estimated from carbon mass of each agglomerate as:
 
 \begin{equation}
 	W^i_{soot}=\frac{C^i_{tot}W_{carbon}}{N^i_{agg}}.
 \end{equation}
 
-The rate constant of carbonization of $\mathrm{Soot-PAH^*}_j$ is defined as in the Arrhenius form similar to the inception formulation (Equation~\eqref{eqn:kc_reacdim}). The pre-exponential factor is adjusted by matching the numercial PSD~\citep{naseri2022simulating} with measurements in the ethylene pyrolysis in a flow reactor~\cite{araki2021effects}. 
+The rate constant of carbonization of Soot$-$$\mathrm{PAH}^*_j$ is defined as in an Arrhenius form similar to the inception formulation (Equation~\eqref{eqn:kc_reacdim}). The pre-exponential factor is adjusted by matching the numercial PSD~\citep{naseri2022simulating} with measurements in the ethylene pyrolysis in a flow reactor~\cite{araki2021effects}. 
 
 \begin{equation}
-	k_{c,dim} = 2\times10^{10}\cdot e^{(-96232/RT)}
+	k_{c,ads} = 2\times10^{10}\cdot e^{(-96232/RT)}
 	\label{eqn:kcads_reacdim}.
 \end{equation}
 
 
-The total adsorption rate can be calculated assuming a steady-state concentration for physically adsorbed PAH on soot, i.e., ${\partial{[\mathrm{Soot-PAH^*}]}/\partial t = 0}$, calculated in a similar way to inception flux (Equation~\eqref{eqn:chemdimer_reacdim}) as:
+The total adsorption rate can be calculated assuming a steady-state concentration for the physically adsorbed PAH on soot, i.e., $\partial$[Soot$-\mathrm{PAH}^*_j$]/$\partial t=0$, calculated in a similar way to the inception flux (Equation~\eqref{eqn:chemdimer_reacdim}) as:
 
 \begin{equation}
-	\omega^i_{ads_j} = k_{c,ads}\frac{k_{f,ads_j}[\mathrm{soot}^i][\mathrm{PAH_j}]}{k_{r,ads_j}+k_{c,ads_j}}
+	\omega^i_{ads_j} = k_{c,ads}\frac{k_{f,ads_j}[\mathrm{soot}^i][\mathrm{PAH}_j]}{k_{r,ads_j}+k_{c,ads_j}}
 	\label{eqn:wads_reacdim},
 \end{equation}
 
-The contribution of PAH adsorption rate to partial source terms can be expressed as:
+The contribution of PAH adsorption rate to the partial source terms can be expressed as:
 
 \begin{equation}
 	I^i_{C_{tot},ads} =
@@ -710,7 +724,7 @@ The rate of removal of PAH from the gas mixture due to inception and PAH adsorpt
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
 	\right)_{inc}
 	= 
 	-\sum_{k=1}^{n_{PAH}}w_{dim_{jk}},
@@ -719,7 +733,7 @@ The rate of removal of PAH from the gas mixture due to inception and PAH adsorpt
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
 	\right)_{ads}
 	= -\sum_{i=1}^{n_{sec}}w^i_{ads_j}.
 	\label{eqn:PAHscrub_ads_reacdim}
@@ -729,7 +743,7 @@ Additionally, during the PAH adsorption process one $\mathrm{H_2}$ is released t
 \begin{equation}
 	\left(
 	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
-	\right)_{inc, ads}
+	\right)_{ads}
 	= 
 	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
 	\label{eqn:H2scrub_reacdim}.
@@ -749,7 +763,7 @@ The Dimer Coalescence model is a multi-step irreversible model proposed by \cite
 	Dimer_{j} + Soot ->[$k_{ads_j}$] Soot-PAH_{j}
 }
 
-\noindent where the rate constant of dimerization, ${k_{dim_{j}}}$, and inception, ${k_{inc_{j}}}$, are calculated from the collision rate of PAHs as:
+The rate constant of dimerization, ${k_{dim_{j}}}$, and inception, ${k_{inc_{j}}}$, are calculated from the collision rate of PAHs as:
 
 \begin{equation}
 	k_{dim_{j}}=
@@ -763,7 +777,7 @@ The Dimer Coalescence model is a multi-step irreversible model proposed by \cite
 	\label{eqn:kinc_dimcoal},
 \end{equation}
 
-\noindent where $\beta_{jj,PAH}$, $\beta^i_{jj,ads}$ are calculated using Equations~\eqref{eqn:betadim}~and~\eqref{eqn:betahmads}, respectively. $\gamma_{dim_j}$ is the dimerization efficiency assumed to scale with the fourth power of PAH molecular weight~\cite{blanquart2009analyzing} as:
+\noindent where $\beta_{jj,PAH}$, $\beta_{jj,dimer}$ are both calculated using Equation~\eqref{eqn:betadim}. $\gamma_{dim_j}$ is the dimerization efficiency assumed to scale with the fourth power of the PAH molecular weight~\cite{blanquart2009analyzing} as:
 
 \begin{equation}
 	\gamma_{dim_j}=
@@ -771,22 +785,29 @@ The Dimer Coalescence model is a multi-step irreversible model proposed by \cite
 	\label{eqn:gamma_dimcoal}
 \end{equation} 
 
-\citet{blanquart2009joint} estimated the constant ${C_{N,j}}$ in Equation~\eqref{eqn:gamma_dimcoal} by comparing the profiles of several PAH species with experimental measurements in a single premixed benzene flame~\citep{tregrossi1999combustion}, and provide ${C_{N,j}}$ values for various PAHs, which are listed in Table 1 in~\citep{blanquart2009analyzing}. The rate of dimer collision is expressed as:
+\citet{blanquart2009joint} estimated the constant ${C_{N,j}}$ in Equation~\eqref{eqn:gamma_dimcoal} by comparing the profiles of several PAH species with the experimental measurements in a single premixed benzene flame~\citep{tregrossi1999combustion}, and provide ${C_{N,j}}$ values for various PAHs, which are listed in Table 1 in~\citep{blanquart2009analyzing}. The rate of dimer collision is expressed as:
 
 \begin{equation}
-	w_{dim_j} = \eta_{inc} k_{inc_{j}} [\mathrm{Dimer}_j] [\mathrm{Dimer}_j]
+	w_{dim_j} = \eta_{inc} k_{inc_{j}} [\mathrm{Dimer}_j] [\mathrm{Dimer}_j].
 	\label{eqn:wdim_dimcoal}
 \end{equation}
+
 
 Similarly, the rate of adsorption of dimers on soot particles is obtained as:
 
 \begin{equation}
-	w^i_{ads_j} = \eta_{ads} k^i_{ads_{j}} [\mathrm{soot}^i] [\mathrm{Dimer}_j]
+	w^i_{ads_j} = \eta_{ads} k^i_{ads_{j}} [\mathrm{soot}^i] [\mathrm{Dimer}_j],
+\end{equation}
+
+\begin{equation}
+	k^i_{ads_{j}}=
+	\beta^i_{ads_j}\cdot Av.
+	\label{eqn:kads_dimcoal}
 \end{equation}
 
 Assuming fast dimer consumption leads to the steady-state concentration of dimers, which can be determined by solving a quadratic equation~\citep{blanquart2009analyzing} as:
 \begin{equation}
-	a_{inc_j}[\mathrm{dimer}]^2+b_{ads_j}[\mathrm{dimer}]=\omega_{dim,j},
+	a_{inc_j}[\mathrm{Dimer}_j]^2+b_{ads_j}[\mathrm{Dimer}_j]=\omega_{dim,j},
 	\label{eqn:quad_dimcoal}
 \end{equation}
 \begin{equation}
@@ -805,11 +826,11 @@ Assuming fast dimer consumption leads to the steady-state concentration of dimer
 	\label{eqn:dimer_dimcoal}
 \end{equation}
 \begin{equation}
-	\Delta_j = b_{ads_j}^2-4a_{inc_j}\omega_{dim,j},
+	\Delta_j = b_{ads_j}^2+4a_{inc_j}\omega_{dim,j},
 	\label{eqn:delta_dimcoal}
 \end{equation}
 
-\noindent where ${a_{inc_j} = k_{inc_{j}}}$ and ${b_{ads_j}}$ is calculated by summing the adsorption rate of dimer for all sections as:
+\noindent where ${a_{inc_j} = k_{inc_{j}}}$ and ${b_{ads_j}}$ is calculated by summing the adsorption rate of dimers for all sections as:
 
 \begin{equation}
 	b_{ads_j} = \sum_{i=1}^{n_{sec}} k^i_{ads_{j}} [\mathrm{soot}^i]
@@ -858,9 +879,7 @@ After determining the concentration of each dimer, the contributions of inceptio
 	I_{H_{tot},{inc}} = \frac{1}{\rho}
 	\sum_{j=1}^{n_{PAH}}
 	4\omega_{inc_{j}} 
-	\left(
-	n_{PAH_j,H}-2
-	\right)
+	n_{PAH_j,H}
 	\label{eqn:IHtot_inc_dimcoal},
 \end{equation}
 
@@ -886,7 +905,7 @@ The rate of removal of PAHs and release of $\mathrm{H_2}$ molecule due to incept
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
 	\right)_{inc}
 	= 
 	-4\sum_{k=1}^{n_{PAH}}w_{inc_{j}},
@@ -895,7 +914,7 @@ The rate of removal of PAHs and release of $\mathrm{H_2}$ molecule due to incept
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH_j}}\right]}{dt}
+	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
 	\right)_{ads}
 	= 
 	-2\sum_{i=1}^{n_{sec}}w^i_{ads_j},
@@ -905,7 +924,7 @@ The rate of removal of PAHs and release of $\mathrm{H_2}$ molecule due to incept
 \begin{equation}
 	\left(
 	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
-	\right)_{inc}
+	\right)_{ads}
 	= 
 	2\sum_{i=1}^{n_{sec}}w^i_{ads_j}
 	\label{eqn:H2scrub_dimcoal}.
@@ -920,13 +939,13 @@ Figure~\ref{fig:constuvvalid} shows the relative errors in total carbon, hydroge
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/Results/Validation/ConstUV/relerr_constuv.pdf}
-	\caption{The relative error of total carbon (red line) and hydrogen (green line) mass, and total internal energy residual of gas and soot (blue line) plotted against residence time during pyrolysis of 30\% $\mathrm{CH_4}$-$\mathrm{N_2}$ at 2455 K and 3.47 atm in the constant volume reactor simulated using different PAH growth models along with MPBM (solid line) and SPBM (dashed line)}
+	\caption{The relative error of total carbon (red line) and hydrogen (green line) mass, and total internal energy residual of gas and soot (blue line) plotted against residence time during pyrolysis of 30\% $\mathrm{CH_4}$-$\mathrm{N_2}$ at 2455 K and 3.47 atm in the constant volume reactor simulated using different PAH growth models along with MPBM (solid line) and SPBM (dashed line).}
 	\label{fig:constuvvalid}
 \end{figure}
 
 
 \subsection{Constant Pressure Reactor}
-The pyrolysis of 5\% $\mathrm{CH_4}$-Ar in a shock-tube with post-reflected-shock temperature and pressure of $\mathrm{T_5}=$2355 K and $\mathrm{P_5}=$4.64 atm, respectively, was simulated using CPR model. Figure~\ref{fig:cprvalid} shows the relative error of total carbon, hydrogen and energy of system for different PAH growth and particle dynamics models in the constant volume that falls below $\mathrm{10^{-10}}$ for all parameters confirming the validity of model in satisfying the mass and energy balance in the constant pressure reactor using all models.
+The pyrolysis of 5\% $\mathrm{CH_4}$-Ar in a shock-tube with post-reflected-shock temperature and pressure of 2355 K and 4.64 atm, respectively, was simulated using CPR model. Figure~\ref{fig:cprvalid} shows the relative error of total carbon, hydrogen and energy of system for different PAH growth and particle dynamics models in the constant pressure that falls below $\mathrm{10^{-10}}$ for all parameters confirming the validity of model in satisfying the mass and energy balance in the constant pressure reactor using all models.
 
 \begin{figure}[H]
 	\centering
@@ -937,7 +956,7 @@ The pyrolysis of 5\% $\mathrm{CH_4}$-Ar in a shock-tube with post-reflected-shoc
 
 \subsection{Perfectly Stirred Reactor}
 \label{sec:psrvalid}
-The mass and energy balance are investigated for soot formation during ethylene-air oxidation at equivalence ratio of $\phi=2$ in a perfectly stirred reactor. The simulation conditions were chosen based on the combustor implemented and utilized by \citet{stouffer2002combustion}. The reactants enter the reactor with the volume of 250 ml at 300 K and atmospheric pressure. The simulation is initialized from a high temperature ($\approx$2000 K) to avoid trivial solution (cold reactant leaving the reactor with no chemical reactions) and to ensure the model captures a sustained combustion. The residence time of products in the reactor is 8.5 ms. Figure~\ref{fig:psrvalid} shows the relative error of total elemental carbon and hydrogen mass and total enthalpy of gas and soot, which is less than $10^{-6}$ for all combinations of particle dynamics and PAH growth models.
+The mass and energy balance are investigated for soot formation during ethylene-air oxidation at equivalence ratio of $\phi=2$ in a perfectly stirred reactor. The simulation conditions were chosen based on the combustor implemented and utilized by \citet{stouffer2002combustion}. The reactants enter the reactor with the volume of 250 ml at 300 K and atmospheric pressure. The simulation is initialized from a high temperature ($\approx2000$~K) to avoid trivial solution (cold reactant leaving the reactor with no chemical reactions) and to ensure the model captures a sustained combustion. The residence time of products in the reactor is 8.5 ms. Figure~\ref{fig:psrvalid} shows the relative error of total elemental carbon and hydrogen mass and total enthalpy of gas and soot, which is less than $10^{-6}$ for all combinations of particle dynamics and PAH growth models.
 
 \begin{figure}[H]
 	\centering
@@ -953,18 +972,18 @@ Methane pyrolysis in an adiabatic PFR was used to assess the conservation of ele
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/Results/Validation/PFR/relerr_pfr.pdf}
-	\caption{The relative error of total carbon (red line) and hydrogen (green line) mass, and total internal energy residual of gas and soot (blue line) plotted against reactor length (cm) in the adiabatic flow reactor during pyrolysis of 30\% $\mathrm{CH_4}$-$\mathrm{N_2}$ at 2100 K and 1 atm simulated using different combinations of PAH growth models and particle dynamics models: MPBM (solid line) and SPBM (dashed line).}
+	\caption{The relative error of total carbon (red line), hydrogen (green line) mass, and total internal energy residual of gas and soot (blue line) plotted against reactor length (cm) in the adiabatic flow reactor during pyrolysis of 30\%~$\mathrm{CH_4}$-$\mathrm{N_2}$ at 2100 K and 1 atm simulated using different combinations of PAH growth models and particle dynamics models: MPBM (solid line) and SPBM (dashed line).}
 	\label{fig:pfrvalid}
 \end{figure}
 
 
 \section{Validation of Collision Frequency}
 \label{sec:validcolfreq}
-The collision frequency function determines the rate at which two particles collide, which results in the reduction of the total number of agglomerates and the increase in particle size. In the absence of strong flow shear or external forces, Brownian motion is the main driving force for particle coagulation. As explained in Sections~\ref{sec:sectextra} and \ref{sec:mpbm}, Omnisoot employs harmonic mean and Fuchs interpolations to calculate collision frequency of agglomerates from free-molecular ($\mathrm{Kn}\ge10$) to continuum ($\mathrm{Kn}\le0.1$) regimes based on gas mean free path and particle size. 
+The collision frequency function determines the rate at which two particles collide, which results in the reduction of the total number of agglomerates and the increase in particle size. In the absence of strong flow shear or external forces, Brownian motion is the main driving force for particle coagulation. As explained in Sections~\ref{sec:sectextra} and \ref{sec:mpbm}, Omnisoot employs harmonic mean and Fuchs interpolations to calculate collision frequency of agglomerates from free-molecular ($\mathrm{Kn}\ge10$) to continuum ($\mathrm{Kn}\le0.1$) regimes based on the gas mean free path and the particle size. 
 
 
 The test case for validation of collision frequency is based on the DEM simulation of 2000 monodisperse spherical particles with the density of 2200 $\mathrm{kg/m^3}$ in
-a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep{goudeli2015coagulation}. Figure~\ref{fig:kernelvalid} depicts the collision frequency plotted against Knudsen number (Kn$=2\lambda/d_m$) obtained by Omnisoot using harmonic mean (red solid line) and Fuchs interpolation (blue dashed line) and DEM results of \citet{goudeli2015coagulation}. The Fuchs interpretation perfectly matches DEM data over the free-molecular to the continuum range. Harmonic mean is also in good agreement with the DEM results in the free-molecular and continuum regimes, but slightly underpredicts the collision frequency in the transition regime (0.1$\le$Kn$\le$10) with relative errors less than 16\%.
+a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep{goudeli2015coagulation}. Figure~\ref{fig:kernelvalid} depicts the collision frequency plotted against Knudsen number ($\mathrm{Kn}=2\lambda/d_m$) obtained by Omnisoot using harmonic mean (red solid line) and Fuchs interpolation (blue dashed line) and DEM results of \citet{goudeli2015coagulation}. The Fuchs interpretation perfectly matches DEM data over the free-molecular regime to the continuum regime. Harmonic mean is also in good agreement with the DEM results in the free-molecular and continuum regimes, but slightly underpredicts the collision frequency in the transition regime with relative errors less than 16\%.
 
 \begin{figure}[H]
 	\centering
@@ -972,11 +991,29 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 		\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=0.45\textwidth]{Figures/Results/Validation/Kernel/kernel_valid.pdf}};
 		\draw (-0.33, 1.11) node {\footnotesize{\cite{goudeli2015coagulation}}};
 	\end{tikzpicture}
-	\caption{The comparison of collision frequency, $\beta$, obtained by Omnisoot using harmonic mean (red solid line) and Fuchs interpolations (blue dashed line) with DEM results (symbols)~\citep{goudeli2015coagulation}}
+	\caption{The comparison of collision frequency, $\beta$, obtained by Omnisoot using harmonic mean (red solid line) and Fuchs interpolations (blue dashed line) with DEM results (symbols)~\citep{goudeli2015coagulation}.}
 	\label{fig:kernelvalid} 
 \end{figure}
 
-\section{The comparison of maximum possible soot volume fraction for different reaction mechanisms}
+
+%\section{The comparison of A2, A2R5, and A4 predicted using different reaction mechanisms}
+%
+%\begin{figure}[H]
+%	\centering
+%	\begin{subfigure}[t]{0.32\textwidth}
+%		\includegraphics[width=1\textwidth]{Figures/Results/chemistry/A2.pdf}
+%	\end{subfigure}
+%	\begin{subfigure}[t]{0.32\textwidth}
+%		\includegraphics[width=1\textwidth]{Figures/Results/chemistry/A2R5.pdf}
+%	\end{subfigure}
+%	\begin{subfigure}[t]{0.32\textwidth}
+%		\includegraphics[width=1\textwidth]{Figures/Results/chemistry/A4.pdf}
+%	\end{subfigure}
+%	\caption{The mole fraction of A2 (a), A2R5 (b), and A4 (c) during pyrolysis of 5\%~$\mathrm{CH_4}$-Ar predicted using different reaction mechanism.}
+%	\label{fig:AAA_chem} 
+%\end{figure}
+
+\section{The comparison of maximum possible soot volume fraction predicted using different reaction mechanisms}
 
 \begin{figure}[H]
 	\centering
@@ -1021,14 +1058,14 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 		\draw (-0.55, 0.29) node {\scriptsize{\cite{agafonov2016unified}}};
 		%\draw (2.42, -0.23) node {\scriptsize{\cite{agafonov2016unified}}};
 	\end{tikzpicture}
-	\caption{The soot carbon yield, CY, at $t=$1.5 ms (a) and primary particle diameter, $d_p$ (b) obtained using the default soot precursors listed in Table~\ref{tab:precursors_list} (denoted by solid line and labeled as ``Default") compared with the same results when five-membered ring PAHs  excluded from soot precursors (denoted by dashed line and labeled as ``NoFive"). Both cases were obtained using Caltech mechanism and the same equal adjustment factors. The dashed line was added to show the trend in the measurements~\citep{agafonov2016unified}.}
+	\caption{The soot carbon yield, CY, at $t=$1.5 ms (a) and primary particle diameter, $d_p$ (b) obtained using the default soot precursors listed in Table~\ref{tab:precursors_list} (denoted by solid line and labeled as ``Default") compared with the same results when five-membered ring PAHs  excluded from soot precursors (denoted by dashed line and labeled as ``NoFive"). Both cases were obtained using Caltech mechanism and the same equal adjustment factors. The black dashed line was added to show the trend in the measurements~\citep{agafonov2016unified}.}
 	\label{fig:shockagof_yieldspc_cpr} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/Results/Shocktube/Agafonov2016_cpr/c_dist_spc.pdf}
-	\caption{The contribution of each soot precursor to total carbon mass from precursors, at $t=$1.5 ms obtained using Caltech mechanisms and SPBM using different inception models during 5\%$\mathrm{CH_4}$-Ar pyrolysis}
+	\caption{The contribution of each soot precursor to total carbon mass from precursors, at $t=$1.5 ms obtained using Caltech mechanisms, SPBM, and different inception models during 5\%$\mathrm{CH_4}$-Ar pyrolysis.}
 	\label{fig:shockagof_spccont_cpr} 
 \end{figure}
 
@@ -1038,7 +1075,7 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\textwidth]{Figures/Results/PFR/temperature_combined.pdf}
-	\caption{The centerline temperature along the reactor for $Q=$8, 11, and 12 L/min interpolated from the thermocouple measurements~\citep{mei2019quantitative}.}
+	\caption{The centerline temperature along the reactor for $\mathrm{Q}=8$, 11, and 12 L/min interpolated from the thermocouple measurements~\citep{mei2019quantitative}.}
 	\label{fig:pfr_temp} 
 \end{figure}
 
@@ -1054,11 +1091,20 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 \end{figure}
 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Figures/Results/PFR/surface_growth.pdf}
+	\caption{The surface growth by HACA and PAH adsorption combined along the PFR for $\mathrm{Q}=8$ (a), 11 (b), and 12 L/min (c) obtained using KAUST mechanism, SPBM and different inception models. The yellow area represents the hot zone ($\mathrm{T}>0.9\mathrm{T_{max}}$).}
+	\label{fig:pfr_surfacegrowth} 
+\end{figure}
+
+
+
 \section{Ethylene oxidation in a perfectly stirred reactor}
 
 \begin{table}[H]
 	\centering
-	\caption{The geometric mean mobility diameter, $d_{m,g}$, and the geometric mobility standard deviation, $\sigma_{m,g}$, obtained using different inception models compared with the value calculated from the measured PSD~\citep{manzello2007soot}}
+	\caption{The geometric mean mobility diameter, $d_{m,g}$, and the geometric mobility standard deviation, $\sigma_{m,g}$, obtained using different inception models compared with the value calculated from the measured PSD~\citep{manzello2007soot}.}
 	\label{tab:psrpfr_morpcomp}
 	%\begin{tabular}{l|ll|ll|ll|}
 	\begin{tabular}{lllllll}
@@ -1072,11 +1118,3 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 		\multicolumn{1}{l}{Irreversible Dimerization} & \multicolumn{1}{l}{8.19}          &      1.14     & \multicolumn{1}{l}{10.96} & 1.25 & \multicolumn{1}{l}{18.44} & 1.78 \\ \hline
 	\end{tabular}
 \end{table}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{Figures/Results/PSR/N_agg_HACA_eq_ratio_all_single_mech.pdf}
-	\caption{The number of agglomerates, $N_{agg}$, and the rate of carbon addition by HACA  along the PFR for $\phi=$1.9 (a,d), 2.0 (b,e), and 2.1 (c,f) obtained using KAUST mechanism, SPBM and different inception models calibrated to match the predictions with measurement~\citep{manzello2007soot}.}
-	\label{fig:psrpfr_Nagg_HACA} 
-\end{figure}

@@ -3,6 +3,11 @@
 \nomenclatureentry{aSPBM@[{SPBM}]\begingroup Sectional Population Balance Model\nomeqref {0}|nompageref}{3}
 \nomenclatureentry{aDEM@[{DEM}]\begingroup Discrete Element Modelling\nomeqref {0}|nompageref}{3}
 \nomenclatureentry{aHACA@[{HACA}]\begingroup H-abstraction-$\mathrm{C_2H_2}$/Carbon-addition\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aPSD@[{PSD}]\begingroup Particle Size Distribution\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aSPSD@[{SPSD}]\begingroup Self-Preserving Size Distribution\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aMOM@[{MOM}]\begingroup Method of Moment\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aTEM@[{TEM}]\begingroup Transmission Electron Microscopy\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aCMF@[{CMF}]\begingroup Carbon Mass Fraction\nomeqref {0}|nompageref}{3}
 \nomenclatureentry{c$k_B$@[{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}\nomeqref {0}|nompageref}{3}
 \nomenclatureentry{c$Av$@[{$Av$}]\begingroup Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}\nomeqref {0}|nompageref}{3}
 \nomenclatureentry{c$R$@[{$R$}]\begingroup Global gas constant\nomunit{8.314 \si{\joule\per\mol\per\kelvin}}\nomeqref {0}|nompageref}{3}

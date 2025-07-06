@@ -2,10 +2,15 @@
 \begin{thenomenclature} 
 \nomgroup{A}
   \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}\nompageref{3}
+  \item [{CMF}]\begingroup Carbon Mass Fraction\nomeqref {0}\nompageref{3}
   \item [{DEM}]\begingroup Discrete Element Modelling\nomeqref {0}\nompageref{3}
   \item [{HACA}]\begingroup H-abstraction-$\mathrm{C_2H_2}$/Carbon-addition\nomeqref {0}\nompageref{3}
+  \item [{MOM}]\begingroup Method of Moment\nomeqref {0}\nompageref{3}
   \item [{MPBM}]\begingroup Monodisperse Population Balance Model\nomeqref {0}\nompageref{3}
+  \item [{PSD}]\begingroup Particle Size Distribution\nomeqref {0}\nompageref{3}
   \item [{SPBM}]\begingroup Sectional Population Balance Model\nomeqref {0}\nompageref{3}
+  \item [{SPSD}]\begingroup Self-Preserving Size Distribution\nomeqref {0}\nompageref{3}
+  \item [{TEM}]\begingroup Transmission Electron Microscopy\nomeqref {0}\nompageref{3}
 \nomgroup{C}
   \item [{$Av$}]\begingroup Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}\nomeqref {0}\nompageref{3}
   \item [{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}\nomeqref {0}\nompageref{3}
