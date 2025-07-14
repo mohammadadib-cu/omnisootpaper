@@ -1,74 +1,74 @@
-\nomenclatureentry{aMPBM@[{MPBM}]\begingroup Monodisperse Population Balance Model\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aCFD@[{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aSPBM@[{SPBM}]\begingroup Sectional Population Balance Model\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aDEM@[{DEM}]\begingroup Discrete Element Modelling\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aHACA@[{HACA}]\begingroup H-abstraction-$\mathrm{C_2H_2}$/Carbon-addition\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aPSD@[{PSD}]\begingroup Particle Size Distribution\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aSPSD@[{SPSD}]\begingroup Self-Preserving Size Distribution\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aMOM@[{MOM}]\begingroup Method of Moment\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aTEM@[{TEM}]\begingroup Transmission Electron Microscopy\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{aCMF@[{CMF}]\begingroup Carbon Mass Fraction\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{c$k_B$@[{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{c$Av$@[{$Av$}]\begingroup Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{c$R$@[{$R$}]\begingroup Global gas constant\nomunit{8.314 \si{\joule\per\mol\per\kelvin}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$h$@[{$h$}]\begingroup Enthalpy\nomunit{\si{J\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$e$@[{$e$}]\begingroup Internal energy\nomunit{\si{J\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$c_p$@[{$c_p$}]\begingroup Heat capacity at constant pressure\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$c_v$@[{$c_v$}]\begingroup Heat capacity at constant volume\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$c_{soot}$@[{$c_{soot}$}]\begingroup Heat capacity of soot\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$u$@[{$u$}]\begingroup Velocity\nomunit{\si{\meter\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$V$@[{$V$}]\begingroup Volume\nomunit{\si{\meter\cubed}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$p$@[{$p$}]\begingroup Pressure\nomunit{\si{\pascal}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$P_c$@[{$P_c$}]\begingroup Wetted perimeter of the flow reactor\nomunit{\si{\meter}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$A$@[{$A$}]\begingroup Surface area\nomunit{\si{\meter\squared}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$k_{dep}$@[{$k_{dep}$}]\begingroup Deposition velocity\nomunit{\si{\meter\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$N_{agg}$@[{$N_{agg}$}]\begingroup Number density of agglomerates\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$N_{pri}$@[{$N_{pri}$}]\begingroup Number density of primary particles\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$C_{tot}$@[{$C_{tot}$}]\begingroup Total carbon content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$H_{tot}$@[{$H_{tot}$}]\begingroup Total hydrogen content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$E(m)$@[{$E(m)$}]\begingroup Absorption function of soot\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$T$@[{$T$}]\begingroup Temperature\nomunit{K}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$I$@[{$I$}]\begingroup Source terms for soot variables\nomunit{\si{\mol\per\kilogram\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$d$@[{$d$}]\begingroup Diameter\nomunit{m}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$m$@[{$m$}]\begingroup Mass\nomunit{\si{\kilogram}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$W$@[{$W$}]\begingroup Molecular weight\nomunit{kg/mol}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$n_p$@[{$n_p$}]\begingroup Number of primary particles of per agglomerate\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$d_p$@[{$d_p$}]\begingroup Primary particle diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$d_m$@[{$d_m$}]\begingroup Mobility diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$d_g$@[{$d_g$}]\begingroup Gyration diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$d_c$@[{$d_c$}]\begingroup Collision diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$k$@[{$k$}]\begingroup Reaction rate constant \nomunit{\si{\meter\cubed\second\per\mol}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$D$@[{$D$}]\begingroup Diffusion coefficient of particles \nomunit{\si{\meter\squared\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$SF$@[{$SF$}]\begingroup Sectional spacing factor \nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$f$@[{$f$}]\begingroup Friction factor \nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$R_H$@[{$R_H$}]\begingroup Duct hydraulic radius \nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$D_H$@[{$D_H$}]\begingroup Duct hydraulic diameter \nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$Kn$@[{$Kn$}]\begingroup Knudsen number \nomunit{\si{\meter}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$f_v$@[{$f_v$}]\begingroup Soot volume fraction based on gas volume\nomunit{\si{\metre\cubed\per\metre\cubed}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$Y$@[{$Y$}]\begingroup Mass fraction of gaseous species\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$Re$@[{$Re$}]\begingroup Reynolds number\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$Sc$@[{$Sc$}]\begingroup Schmidt number\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{e$Sh$@[{$Sh$}]\begingroup Sherwood number\nomunit{\si{-}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\rho$@[{$\rho$}]\begingroup Density\nomunit{\si{\kg\per\metre^3}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\varphi$@[{$\varphi$}]\begingroup Soot volume fraction based on reactor volume\nomunit{\si{\metre\cubed\per\metre\cubed }}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\nu$@[{$\nu$}]\begingroup Gas kinematic viscosity\nomunit{\si{\metre^2\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\beta$@[{$\beta$}]\begingroup Collision frequency\nomunit{\si{\metre^3\per\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\lambda$@[{$\lambda$}]\begingroup Mean free path\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\lambda_a$@[{$\lambda_a$}]\begingroup Mean stopping distance of particles\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\delta_a$@[{$\delta_a$}]\begingroup Mean distance of particles\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\omega$@[{$\omega$}]\begingroup The rate of production of gaseous species\nomunit{\si{\mol\per\metre\cubed\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\tau_w$@[{$\tau_w$}]\begingroup Wall shear stress\nomunit{\si{\pascal}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\tau_{psr}$@[{$\tau_{psr}$}]\begingroup Nominal residence time of perfectly stirred reactor\nomunit{\si{\second}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{g$\epsilon$@[{$\epsilon$}]\begingroup Wall roughness\nomunit{\si{\meter}}\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{uagg@[{agg}]\begingroup Agglomerate\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{upri@[{pri}]\begingroup Primary particle\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ufm@[{fm}]\begingroup Free molecular\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ucont@[{cont}]\begingroup Continuum\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{uinc@[{inc}]\begingroup Inception\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ugrow@[{grow}]\begingroup Surface growth\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{uox@[{ox}]\begingroup Oxidation\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ucoag@[{coag}]\begingroup Coagulation\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{uads@[{ads}]\begingroup Adsorption\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{uf@[{f}]\begingroup Forward\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ur@[{r}]\begingroup Reverse\nomeqref {0}|nompageref}{3}
-\nomenclatureentry{ureac@[{reac}]\begingroup Reactive\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{aMPBM@[{MPBM}]\begingroup Monodisperse Population Balance Model\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aCFD@[{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aSPBM@[{SPBM}]\begingroup Sectional Population Balance Model\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aDEM@[{DEM}]\begingroup Discrete Element Modelling\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aHACA@[{HACA}]\begingroup H-abstraction-$\mathrm{C_2H_2}$/Carbon-addition\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aPSD@[{PSD}]\begingroup Particle Size Distribution\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aSPSD@[{SPSD}]\begingroup Self-Preserving Size Distribution\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aMOM@[{MOM}]\begingroup Method of Moment\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aTEM@[{TEM}]\begingroup Transmission Electron Microscopy\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aCMF@[{CMF}]\begingroup Carbon Mass Fraction\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{c$k_B$@[{$k_B$}]\begingroup Boltzmann constant \nomunit{$1.3806488 \times 10^{-23}$ \si{J \per K}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{c$Av$@[{$Av$}]\begingroup Avogadro's number\nomunit{6.02214076 $\times 10^{23}$ \si{1 / mol}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{c$R$@[{$R$}]\begingroup Global gas constant\nomunit{8.314 \si{\joule\per\mol\per\kelvin}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$h$@[{$h$}]\begingroup Enthalpy\nomunit{\si{J\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$e$@[{$e$}]\begingroup Internal energy\nomunit{\si{J\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$c_p$@[{$c_p$}]\begingroup Heat capacity at constant pressure\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$c_v$@[{$c_v$}]\begingroup Heat capacity at constant volume\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$c_{soot}$@[{$c_{soot}$}]\begingroup Heat capacity of soot\nomunit{\si{\joule\per\kg\per\kelvin}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$u$@[{$u$}]\begingroup Velocity\nomunit{\si{\meter\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$V$@[{$V$}]\begingroup Volume\nomunit{\si{\meter\cubed}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$p$@[{$p$}]\begingroup Pressure\nomunit{\si{\pascal}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$P_c$@[{$P_c$}]\begingroup Wetted perimeter of the flow reactor\nomunit{\si{\meter}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$A$@[{$A$}]\begingroup Surface area\nomunit{\si{\meter\squared}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$k_{dep}$@[{$k_{dep}$}]\begingroup Deposition velocity\nomunit{\si{\meter\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$N_{agg}$@[{$N_{agg}$}]\begingroup Number density of agglomerates\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$N_{pri}$@[{$N_{pri}$}]\begingroup Number density of primary particles\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$C_{tot}$@[{$C_{tot}$}]\begingroup Total carbon content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$H_{tot}$@[{$H_{tot}$}]\begingroup Total hydrogen content of soot particles (per section)\nomunit{\si{mol\per\kg}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$E(m)$@[{$E(m)$}]\begingroup Absorption function of soot\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$T$@[{$T$}]\begingroup Temperature\nomunit{K}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$I$@[{$I$}]\begingroup Source terms for soot variables\nomunit{\si{\mol\per\kilogram\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$d$@[{$d$}]\begingroup Diameter\nomunit{m}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$m$@[{$m$}]\begingroup Mass\nomunit{\si{\kilogram}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$W$@[{$W$}]\begingroup Molecular weight\nomunit{kg/mol}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$n_p$@[{$n_p$}]\begingroup Number of primary particles of per agglomerate\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$d_p$@[{$d_p$}]\begingroup Primary particle diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$d_m$@[{$d_m$}]\begingroup Mobility diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$d_g$@[{$d_g$}]\begingroup Gyration diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$d_c$@[{$d_c$}]\begingroup Collision diameter \nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$k$@[{$k$}]\begingroup Reaction rate constant \nomunit{\si{\meter\cubed\second\per\mol}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$D$@[{$D$}]\begingroup Diffusion coefficient of particles \nomunit{\si{\meter\squared\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$SF$@[{$SF$}]\begingroup Sectional spacing factor \nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$f$@[{$f$}]\begingroup Friction factor \nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$R_H$@[{$R_H$}]\begingroup Duct hydraulic radius \nomunit{\si{\meter}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$D_H$@[{$D_H$}]\begingroup Duct hydraulic diameter \nomunit{\si{\meter}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$Kn$@[{$Kn$}]\begingroup Knudsen number \nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$f_v$@[{$f_v$}]\begingroup Soot volume fraction based on gas volume\nomunit{\si{\metre\cubed\per\metre\cubed}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$Y$@[{$Y$}]\begingroup Mass fraction of gaseous species\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$Re$@[{$Re$}]\begingroup Reynolds number\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$Sc$@[{$Sc$}]\begingroup Schmidt number\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{e$Sh$@[{$Sh$}]\begingroup Sherwood number\nomunit{\si{-}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\rho$@[{$\rho$}]\begingroup Density\nomunit{\si{\kg\per\metre^3}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\varphi$@[{$\varphi$}]\begingroup Soot volume fraction based on reactor volume\nomunit{\si{\metre\cubed\per\metre\cubed }}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\nu$@[{$\nu$}]\begingroup Gas kinematic viscosity\nomunit{\si{\metre^2\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\beta$@[{$\beta$}]\begingroup Collision frequency\nomunit{\si{\metre^3\per\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\lambda$@[{$\lambda$}]\begingroup Mean free path\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\lambda_a$@[{$\lambda_a$}]\begingroup Mean stopping distance of particles\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\delta_a$@[{$\delta_a$}]\begingroup Mean distance of particles\nomunit{\si{\metre}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\omega$@[{$\omega$}]\begingroup The rate of production of gaseous species\nomunit{\si{\mol\per\metre\cubed\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\tau_w$@[{$\tau_w$}]\begingroup Wall shear stress\nomunit{\si{\pascal}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\tau_{psr}$@[{$\tau_{psr}$}]\begingroup Nominal residence time of perfectly stirred reactor\nomunit{\si{\second}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{g$\epsilon$@[{$\epsilon$}]\begingroup Wall roughness\nomunit{\si{\meter}}\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{uagg@[{agg}]\begingroup Agglomerate\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{upri@[{pri}]\begingroup Primary particle\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ufm@[{fm}]\begingroup Free-molecular\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ucont@[{cont}]\begingroup Continuum\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{uinc@[{inc}]\begingroup Inception\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ugrow@[{grow}]\begingroup Surface growth\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{uox@[{ox}]\begingroup Oxidation\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ucoag@[{coag}]\begingroup Coagulation\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{uads@[{ads}]\begingroup Adsorption\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{uf@[{f}]\begingroup Forward\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ur@[{r}]\begingroup Reverse\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{ureac@[{reac}]\begingroup Reactive\nomeqref {0}|nompageref}{2}

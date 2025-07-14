@@ -2,7 +2,7 @@
 
 \begin{center}
 	\vspace*{1cm} % Force vertical space below header
-	\textbf{\LARGE 		Omnisoot: an object oriented package for process design of gas phase synthesis of Carbon black} 
+	\textbf{\LARGE 		Omnisoot: an object-oriented process design package for gas-phase synthesis of carbonaceous nanoparticles} 
 \end{center}
 
 \begin{center}
@@ -494,38 +494,38 @@ The forward rate of dimerization, ${k_{f,dim_j}}$, and adsorption, $k_{f,ads_j}$
 \noindent where $\beta_{jk,\mathrm{PAH}}$ and $\beta^i_{j,\mathrm{ads}}$ are computed using Equations~\eqref{eqn:betadim} and~\eqref{eqn:betahmads}, respectively, and $\gamma_{\mathrm{inc}}$ and $\gamma_{\mathrm{ads}}$ are the collision efficiencies for dimerization and adsorption, respectively. Their values range from $\mathrm{10^{-7}}$ to 1 and are typically chosen to match the predicted soot properties with experimental data. The dimerization rate of $\mathrm{PAH}_j$ is then calculated as:
 
 \begin{equation}
-	w_{dim_j} = \eta_{inc} k_{f,dim_{j}} [\mathrm{PAH}_j] [\mathrm{PAH}_j].
+	\omega_{dim_j} = \eta_{inc} k_{f,dim_{j}} [\mathrm{PAH}_j] [\mathrm{PAH}_j].
 	\label{eqn:irrevdim_wdim}
 \end{equation}
 
 The partial source terms of inception are calculated as:
 
 \begin{equation}
-	I_{N,inc} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,C},
+	I_{N,inc} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} 2\omega_{dim_j} n_{PAH_j,C},
 	\label{eqn:INinc}
 \end{equation}
 \begin{equation}
-	I_{C_{tot},inc} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,C}.
+	I_{C_{tot},inc} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH}} 2\omega_{dim_j} n_{PAH_j,C}.
 	\label{eqn:ICtotinc}
 \end{equation}
 \begin{equation}
-	I_{H_{tot},inc} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} 2w_{dim_j} n_{PAH_j,H}.
+	I_{H_{tot},inc} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH}} 2\omega_{dim_j} n_{PAH_j,H}.
 	\label{eqn:IHtotinc}
 \end{equation}
 The rate of PAH adsorption for each section is obtained as:
 \begin{equation}
-	w^i_{ads_j} = \eta_{ads} k^i_{f,ads_{j}} [\mathrm{soot}^i] [\mathrm{PAH}_j].
+	\omega^i_{ads_j} = \eta_{ads} k^i_{f,ads_{j}} [\mathrm{soot}^i] [\mathrm{PAH}_j].
 	\label{eqn:adsrate_irrevdim}
 \end{equation}
 
 The contribution of PAH adsorption to the source terms are expressed as:
 
 \begin{equation}
-	I^i_{C_{tot},ads} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH_j}} w^i_{ads_j} n_{PAH_j,C},
+	I^i_{C_{tot},ads} = \frac{1}{\rho}\sum_{j=1}^{n_{PAH_j}} \omega^i_{ads_j} n_{PAH_j,C},
 	\label{eqn:ICtotads}
 \end{equation}
 \begin{equation}
-	I^i_{H_{tot},ads} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH_j}} w^i_{ads_j} (n_{PAH_j,H}-2).
+	I^i_{H_{tot},ads} =\frac{1}{\rho} \sum_{j=1}^{n_{PAH_j}} \omega^i_{ads_j} (n_{PAH_j,H}-2).
 	\label{eqn:IHtotads}
 \end{equation}
 
@@ -535,29 +535,29 @@ The formation of a dimer consumes two PAH molecules, and during adsorption one P
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{inc}
 	= 
-	-2w_{dim_j},
+	-2\omega_{dim_j},
 	\label{eqn:PAHscrub_irrevdim_inc}
 \end{equation}
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{inc}
 	= 
-	-\sum_{i=1}^{n_{sec}}w^i_{ads_j}.
+	-\sum_{i=1}^{n_{sec}}\omega^i_{ads_j}.
 	\label{eqn:PAHscrub_irrevdim_ads}
 \end{equation}
 
 Moreover, one $\mathrm{H_2}$ is released to the gas mixture as a result of the adsorption process.
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{H_2}}\right]}{\mathrm{d}t}
 	\right)_{ads}
 	= 
-	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
+	\sum_{i=1}^{n_{sec}}\omega^i_{ads_j}
 	\label{eqn:H2scrub_irrevdim}.
 \end{equation}
 
@@ -724,28 +724,28 @@ The rate of removal of PAH from the gas mixture due to inception and PAH adsorpt
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{inc}
 	= 
-	-\sum_{k=1}^{n_{PAH}}w_{dim_{jk}},
+	-\sum_{k=1}^{n_{PAH}}\omega_{dim_{jk}},
 	\label{eqn:PAHscrub_inc_reacdim}
 \end{equation}
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{ads}
-	= -\sum_{i=1}^{n_{sec}}w^i_{ads_j}.
+	= -\sum_{i=1}^{n_{sec}}\omega^i_{ads_j}.
 	\label{eqn:PAHscrub_ads_reacdim}
 \end{equation}
 
 Additionally, during the PAH adsorption process one $\mathrm{H_2}$ is released to the gas mixture changing the concentration of $\mathrm{H_2}$ as:
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{H_2}}\right]}{\mathrm{d}t}
 	\right)_{ads}
 	= 
-	\sum_{i=1}^{n_{sec}}w^i_{ads_j}
+	\sum_{i=1}^{n_{sec}}\omega^i_{ads_j}
 	\label{eqn:H2scrub_reacdim}.
 \end{equation}
 
@@ -788,7 +788,7 @@ The rate constant of dimerization, ${k_{dim_{j}}}$, and inception, ${k_{inc_{j}}
 \citet{blanquart2009joint} estimated the constant ${C_{N,j}}$ in Equation~\eqref{eqn:gamma_dimcoal} by comparing the profiles of several PAH species with the experimental measurements in a single premixed benzene flame~\citep{tregrossi1999combustion}, and provide ${C_{N,j}}$ values for various PAHs, which are listed in Table 1 in~\citep{blanquart2009analyzing}. The rate of dimer collision is expressed as:
 
 \begin{equation}
-	w_{dim_j} = \eta_{inc} k_{inc_{j}} [\mathrm{Dimer}_j] [\mathrm{Dimer}_j].
+	\omega_{dim_j} = \eta_{inc} k_{inc_{j}} [\mathrm{Dimer}_j] [\mathrm{Dimer}_j].
 	\label{eqn:wdim_dimcoal}
 \end{equation}
 
@@ -796,7 +796,7 @@ The rate constant of dimerization, ${k_{dim_{j}}}$, and inception, ${k_{inc_{j}}
 Similarly, the rate of adsorption of dimers on soot particles is obtained as:
 
 \begin{equation}
-	w^i_{ads_j} = \eta_{ads} k^i_{ads_{j}} [\mathrm{soot}^i] [\mathrm{Dimer}_j],
+	\omega^i_{ads_j} = \eta_{ads} k^i_{ads_{j}} [\mathrm{soot}^i] [\mathrm{Dimer}_j],
 \end{equation}
 
 \begin{equation}
@@ -897,36 +897,36 @@ After determining the concentration of each dimer, the contributions of inceptio
 	\frac{1}{\rho}
 	\sum_{i=1}^{n_{PAH}}
 	2\omega^i_{ads_j}
-	\left(n_{H,PAH_j}-2\right)
+	\left(n_{H,PAH_j}-1\right)
 	\label{eqn:IHtotads_dimcoal}.
 \end{equation}
 
-The rate of removal of PAHs and release of $\mathrm{H_2}$ molecule due to inception and PAH adsorption is calculated as:
+The rate of removal of PAHs and release of $\mathrm{H_2}$ molecule due to PAH adsorption is calculated as:
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{inc}
 	= 
-	-4\sum_{k=1}^{n_{PAH}}w_{inc_{j}},
+	-4\sum_{k=1}^{n_{PAH}}\omega_{inc_{j}},
 	\label{eqn:PAHscrub_dimcoal_inc}
 \end{equation}
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{PAH}_j}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{PAH}_j}\right]}{\mathrm{d}t}
 	\right)_{ads}
 	= 
-	-2\sum_{i=1}^{n_{sec}}w^i_{ads_j},
+	-2\sum_{i=1}^{n_{sec}}\omega^i_{ads_j},
 	\label{eqn:PAHscrub_dimcoal_ads}
 \end{equation}
 
 \begin{equation}
 	\left(
-	\frac{d\left[{\mathrm{H_2}}\right]}{dt}
+	\frac{\mathrm{d}\left[{\mathrm{H_2}}\right]}{\mathrm{d}t}
 	\right)_{ads}
 	= 
-	2\sum_{i=1}^{n_{sec}}w^i_{ads_j}
+	\sum_{i=1}^{n_{sec}}\omega^i_{ads_j}
 	\label{eqn:H2scrub_dimcoal}.
 \end{equation}
 
@@ -1019,9 +1019,9 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 	\centering
 	\begin{tikzpicture}
 		\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=0.35\textwidth]{Figures/Results/chemistry/soot_fv_max.pdf}};
-		\draw (0.11, 2.58) node {\tiny{\hl{[G]}}};
+		\draw (0.14, 2.58) node {\tiny{\citep{clack2025}}};
 	\end{tikzpicture}
-	\caption{The maximum soot volume fraction predicted using Irreversible Dimerization and different reaction mechanisms during pyrolysis of 5\%~$\mathrm{CH_4}$-Ar was compared with measurements~[\hl{GB}]. The shaded area represents the uncertainty in the reported experimental data.}
+	\caption{The maximum soot volume fraction predicted using Irreversible Dimerization and different reaction mechanisms during pyrolysis of 5\%~$\mathrm{CH_4}$-Ar was compared with measurements~\citep{clack2025}. The shaded area represents the uncertainty in the reported experimental data.}
 	\label{fig:max_sootfv_chem} 
 \end{figure}
 
@@ -1067,6 +1067,19 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 	\includegraphics[width=0.8\textwidth]{Figures/Results/Shocktube/Agafonov2016_cpr/c_dist_spc.pdf}
 	\caption{The contribution of each soot precursor to total carbon mass from precursors, at $t=$1.5 ms obtained using Caltech mechanisms, SPBM, and different inception models during 5\%$\mathrm{CH_4}$-Ar pyrolysis.}
 	\label{fig:shockagof_spccont_cpr} 
+\end{figure}
+
+\section{The results of KAUST mechanisms for the shock-tube simulation}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0] 	{\includegraphics[width=0.8\textwidth]{Figures/Results/Shocktube/Agafonov2016_cpr/carbon_yield_d_p_5CH4_kaust.pdf}};
+		\draw (-0.85, 0.42) node {\scriptsize{\cite{agafonov2016unified}}};
+		%\draw (2.42, -0.23) node {\scriptsize{\cite{agafonov2016unified}}};
+	\end{tikzpicture}
+	\caption{The CY (a) and primary particle diameter, $d_p$, (b) at $t=1.5$~ms during the pyrolysis of 5\%~$\mathrm{CH_4}$-Ar obtained using KAUST mechanism, SPBM and different inception models optimized using equal adjustment factors to minimize the prediction error with extinction measurements~\citep{agafonov2016unified}. The dashed line was added to show the trend in the measurements.}
+	\label{fig:shockagof_yield_dp_cpr_kaust} 
 \end{figure}
 
 \section{Ethylene pyrolysis in a flow reactor}
@@ -1118,3 +1131,33 @@ a cubic cell with the constant temperature of 298 K and pressure of 1 atm~\citep
 		\multicolumn{1}{l}{Irreversible Dimerization} & \multicolumn{1}{l}{8.19}          &      1.14     & \multicolumn{1}{l}{10.96} & 1.25 & \multicolumn{1}{l}{18.44} & 1.78 \\ \hline
 	\end{tabular}
 \end{table}
+
+
+%\section{The summary of the $\eta_{inc}$ and $\eta_{ads}$ values}
+%
+%\begin{table}[H]
+%	\caption{The inception ($\eta_{inc}$) and PAH adsorption ($\eta_{ads}$) adjustment factors used to minimize the prediction error in the studied cases}
+%	\label{tab:optimizedfactors}
+%	\begin{tabular}{llllllll}
+%		\cline{3-8}
+%		&     & \multicolumn{2}{l}{\textbf{Methane pyrolysis}} & \multicolumn{2}{l}{\textbf{Ethylene pyrolysis}} & \multicolumn{2}{l}{\textbf{Ethylene oxidation}} \\
+%		\cline{3-8}
+%		&     & Caltech            & KAUST            & Caltech             & KAUST            & Caltech            & KAUST             \\
+%		\hline
+%		\multirow{2}{*}{Reac.Dim.}  & $\eta_{inc}$  & 0.17               & 0.023            & 0.16               & 0.01            & N/A                & 0.0005              \\
+%		
+%		& $\eta_{ads}$  & 0.17               & 0.023            & 0.001                & 0.001              & N/A                & 0.01            \\
+%		\hline
+%		\multirow{2}{*}{Dim.Coal.}  & $\eta_{inc}$  & 0.21               & 0.02             & 0.035                   & 0.004             & N/A                & 0.001              \\
+%		
+%		& $\eta_{ads}$  & 0.21               & 0.02             & 1               & 0.01            & N/A                & 0.01             \\
+%		\hline
+%		\multirow{2}{*}{E-Bri.Mod.} & $\eta_{inc}$  & 0.36               & 0.012            & 0.1                & 0.01              & N/A                & 0.0002              \\
+%		
+%		& $\eta_{ads}$  & 0.36               & 0.012            & 0.01                 & 0.1             & N/A                & 0.01            \\
+%		\hline
+%		\multirow{2}{*}{Irrev.Dim.} & $\eta_{inc}$  & 2.3                & 0.54             & 1                   & 0.08                & N/A                & 0.01                 \\
+%		& $\eta_{ads}$  & 2.3                & 0.54             & 1                   & 1             & N/A                & 1  \\
+%		\hline
+%	\end{tabular}
+%\end{table}

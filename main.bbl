@@ -1,4 +1,4 @@
-\begin{thebibliography}{124}
+\begin{thebibliography}{125}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -741,6 +741,14 @@ Jacob~W Martin, Maurin Salamanca, and Markus Kraft.
 \newblock Soot inception: Carbonaceous nanoparticle formation in flames.
 \newblock \emph{Progress in Energy and Combustion Science}, 88:\penalty0
   100956, 2022.
+
+\bibitem[Gibson et~al.(2025)Gibson, Mishra, Rault, M., Streicher, Wei, Zaczek,
+  and Hanson]{clack2025}
+Clark Gibson, Naman Mishra, Rault, Taylor M., Jesse~W. Streicher, Chuyu Wei,
+  Luke~T. Zaczek, and Ronald~K. Hanson.
+\newblock Shock tube study of methane pyrolysis for industrial production of
+  hydrogen and carbon black.
+\newblock \emph{in prepapration}, 2025.
 
 \bibitem[Blanquart et~al.(2009)Blanquart, Pepiot-Desjardins, and
   Pitsch]{blanquart2009chemical}
